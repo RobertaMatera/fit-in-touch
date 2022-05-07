@@ -41,4 +41,12 @@
     font-size: 0.5rem;
     color: grey;
   }
+
+  & .row:first-child {
+    background-color: rgba($light-sand, 30%);
+  }
+
+  & .my-logo {
+    width: 30px;
+  }
 }

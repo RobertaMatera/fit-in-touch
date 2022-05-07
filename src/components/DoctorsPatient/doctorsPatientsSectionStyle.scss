@@ -1,0 +1,27 @@
+@import "../../index.scss";
+@import "./singlePatientCardStyle.scss";
+
+#DoctorsPatientsSection {
+  & h2 {
+    color: $dark-green;
+    font-weight: bold;
+  }
+  & .my-search-btn {
+    color: $dark-green;
+    border-color: $dark-green;
+    &:hover {
+      color: $white;
+      background-color: $dark-green;
+      border-color: $dark-green;
+    }
+  }
+
+  & .btn-show-hide {
+    color: $dark-green;
+    background-color: $light-sand;
+    &:hover {
+      color: $white;
+      background-color: $my-gray;
+    }
+  }
+}
