@@ -1,0 +1,44 @@
+@import "../../index.scss";
+
+#navigation {
+  & .nav-container {
+    padding: 30px;
+  }
+
+  & li.my-nav-link > a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $dark-green;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+
+    &:visited {
+      color: $my-gray;
+    }
+
+    &:hover {
+      color: $light-sand;
+    }
+
+    &:active {
+      color: $black;
+    }
+
+    &.active {
+      color: $dark-green !important;
+      background-color: rgba($light-sand, 50%);
+      padding: 0.5rem 1rem;
+      border-radius: 50%;
+    }
+  }
+
+  & .doctor-name {
+    padding: 8px;
+  }
+
+  & .log-in-out {
+    font-size: 0.5rem;
+    color: grey;
+  }
+}
