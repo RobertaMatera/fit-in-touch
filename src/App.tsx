@@ -1,4 +1,5 @@
 import "./App.scss";
+import "react-big-calendar/lib/sass/styles.scss";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/NavigationComponent/NavigationComponent";
 import DoctorsPatientsSection from "./components/DoctorsPatient/DoctorsPatientsSectionComponent";
