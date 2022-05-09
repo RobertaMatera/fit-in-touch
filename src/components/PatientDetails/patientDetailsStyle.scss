@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+  #patient-info-section {
+    & .col-box {
+      display: flex;
+      flex-direction: row;
+      & :nth-child(1) {
+        order: 2;
+      }
+      & :nth-child(2) {
+        order: 1;
+      }
+      & :nth-child(3) {
+        order: 3;
+      }
+    }
+  }
+}
+
+#patient-info-section {
+  & h1 {
+    font-size: 1.4rem;
+    color: $main-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

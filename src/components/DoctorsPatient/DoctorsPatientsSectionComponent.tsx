@@ -21,7 +21,8 @@ const DoctorsPatientsSection = () => {
         <Col
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
+          xl={3}
           className="d-flex justify-content-center mb-3"
         >
           <SinglePatientCard />
@@ -29,7 +30,8 @@ const DoctorsPatientsSection = () => {
         <Col
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
+          xl={3}
           className="d-flex justify-content-center mb-3"
         >
           <SinglePatientCard />
@@ -37,7 +39,8 @@ const DoctorsPatientsSection = () => {
         <Col
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
+          xl={3}
           className="d-flex justify-content-center mb-3"
         >
           <SinglePatientCard />
@@ -45,7 +48,8 @@ const DoctorsPatientsSection = () => {
         <Col
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
+          xl={3}
           className="d-flex justify-content-center mb-3"
         >
           <SinglePatientCard />
@@ -53,7 +57,8 @@ const DoctorsPatientsSection = () => {
         <Col
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
+          xl={3}
           className="d-flex justify-content-center mb-3"
         >
           <SinglePatientCard />

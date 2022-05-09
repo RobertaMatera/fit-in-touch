@@ -1,5 +1,3 @@
-@import "../../index.scss";
-
 @mixin icon($top: 160px, $left: 35px) {
   position: absolute;
   top: $top;
@@ -18,10 +16,12 @@ div.icon-wrapper {
 .icon-mail {
   @include icon(230px);
 }
-.icon-info {
-  @include icon(160px, 0px);
-}
 
+.btn-i-info {
+  @include icon(150px, -10px);
+  color: #000;
+  background-color: none;
+}
 .card-container {
   display: inline-block;
   width: 240px;

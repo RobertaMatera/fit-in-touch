@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 const SinglePatientCard = () => {
+  const navigate = useNavigate();
+
+  const redirectTo = () => navigate("/patients/id");
+
   return (
     <div id="patient-card" className="card-container">
       <div className="icon-wrapper">
@@ -12,7 +18,10 @@ const SinglePatientCard = () => {
         <i className="bi bi-chat-right-text icon-chat"></i>
         <i className="bi bi-whatsapp icon-wa"></i>
         <i className="bi bi-envelope icon-mail"></i>
-        <i className="bi bi-info-circle-fill icon-info"></i>
+        <button type="button" className="btn btn-i-info" onClick={redirectTo}>
+          {" "}
+          <i className="bi bi-info-circle-fill"></i>
+        </button>
       </div>
       <div className="text-container">
         <div>
