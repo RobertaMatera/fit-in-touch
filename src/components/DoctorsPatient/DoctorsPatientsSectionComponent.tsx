@@ -1,4 +1,3 @@
-import "./doctorsPatientsSectionStyle.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import SinglePatientCard from "./SinglePatientCardComponent";
 import Search from "./SearchComponent";

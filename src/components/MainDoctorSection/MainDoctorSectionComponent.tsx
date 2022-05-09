@@ -1,4 +1,3 @@
-import "./mainDoctorSectionStyle.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import Agenda from "./AgendaComponent";
 

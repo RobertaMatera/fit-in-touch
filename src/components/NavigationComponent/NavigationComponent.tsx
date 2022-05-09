@@ -1,4 +1,3 @@
-import "./navigationStyle.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link as NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
