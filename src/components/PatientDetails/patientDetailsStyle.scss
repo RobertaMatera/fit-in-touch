@@ -1,3 +1,8 @@
+@mixin box-containers {
+  background-color: rgba($light-sand, 30%);
+  padding: 15px;
+}
+
 @media screen and (min-width: 768px) {
   #patient-info-section {
     & .col-box {
@@ -29,10 +34,10 @@
     font-weight: bold;
     color: $dark-green;
   }
-  & .contactInfo-box {
+  & .contactInfo-box,
+  .patientInfo-box {
+    @include box-containers;
     & .info-container {
-      background-color: rgba($light-sand, 30%);
-      padding: 15px;
       h6 {
         font-size: 0.8rem;
         margin-bottom: 3px;
@@ -44,10 +49,34 @@
       }
     }
   }
+
+  & .patientInfo-box {
+    @include box-containers;
+    & .links-box a {
+      text-decoration: none;
+      &:link {
+        color: $dark-green;
+        background-color: rgba($dark-sand, 30%);
+        padding: 5px;
+      }
+      &:visited {
+        color: $my-gray;
+      }
+      &:hover {
+        color: $main-blue;
+        text-decoration: underline;
+      }
+      &:active {
+        color: $white;
+        background-color: $dark-green;
+      }
+    }
+  }
 }
 
 .patient-notes {
   width: 200px;
   height: 150px;
   overflow: auto;
+  background-color: $white;
 }

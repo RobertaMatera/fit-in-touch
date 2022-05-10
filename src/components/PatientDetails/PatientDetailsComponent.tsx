@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ContactInfo from "./ContactInfoComponent";
+import PatientInfo from "./PatientInfoComponent";
 
 const PatientDetails = () => {
   return (
@@ -21,7 +22,7 @@ const PatientDetails = () => {
         >
           {" "}
           <div className="contactInfo-box">
-            <h6 className="text-center">contact info</h6>
+            <h6>contact info</h6>
             <ContactInfo />
           </div>
         </Col>
@@ -32,7 +33,10 @@ const PatientDetails = () => {
           className="d-flex justify-content-center mt-5 mt-md-0"
         >
           {" "}
-          <h6 className="text-center">patient info</h6>
+          <div className="patientInfo-box">
+            <h6>patient info</h6>
+            <PatientInfo />
+          </div>
         </Col>
       </Row>
     </Container>

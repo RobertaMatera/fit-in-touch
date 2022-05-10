@@ -11,6 +11,7 @@ const ContactInfo = () => {
         <h6>payment method</h6>
         <p>credit card</p>
       </div>
+      <hr />
       <div className="mt-4">
         <p>
           {" "}
