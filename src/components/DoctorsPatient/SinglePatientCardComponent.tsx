@@ -20,7 +20,7 @@ const SinglePatientCard = () => {
         <i className="bi bi-envelope icon-mail"></i>
         <button type="button" className="btn btn-i-info" onClick={redirectTo}>
           {" "}
-          <i className="bi bi-info-circle-fill"></i>
+          <i className="bi info-circle-fill"></i>
         </button>
       </div>
       <div className="text-container">

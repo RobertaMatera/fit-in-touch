@@ -2,6 +2,11 @@
   position: absolute;
   top: $top;
   left: $left;
+  color: $my-gray;
+}
+@mixin icon-hover($hover-color: $dark-green) {
+  cursor: pointer;
+  color: $hover-color;
 }
 
 div.icon-wrapper {
@@ -9,19 +14,38 @@ div.icon-wrapper {
 }
 .icon-chat {
   @include icon;
+  &:hover {
+    @include icon-hover();
+  }
 }
 .icon-wa {
   @include icon(195px);
+  &:hover {
+    @include icon-hover();
+  }
 }
 .icon-mail {
   @include icon(230px);
+  &:hover {
+    @include icon-hover();
+  }
 }
 
 .btn-i-info {
-  @include icon(150px, -10px);
-  color: #000;
+  @include icon(150px, -30px);
+  color: $dark-green;
   background-color: none;
+  &:hover {
+    @include icon-hover($main-blue);
+  }
+  &:focus {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
 }
+
 .card-container {
   display: inline-block;
   width: 240px;
@@ -79,4 +103,9 @@ div.icon-wrapper {
     color: $white !important;
     background-color: $my-gray;
   }
+}
+
+.info-circle-fill::before {
+  content: "\f430";
+  font-size: 30px;
 }
