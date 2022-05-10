@@ -2,15 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import SinglePatientCard from "./SinglePatientCardComponent";
 import Search from "./SearchComponent";
 import Filter from "./FilterComponent";
+import { Link } from "react-router-dom";
 
 const DoctorsPatientsSection = () => {
   return (
     <Container fluid id="DoctorsPatientsSection">
-      {/* <Row>
-        <Col xs={12} className="d-flex justify-content-center my-3">
-          <h2>My Patients</h2>
-        </Col>
-      </Row> */}
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
           <Search />

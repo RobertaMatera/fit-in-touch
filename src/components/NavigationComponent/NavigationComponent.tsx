@@ -50,6 +50,14 @@ const Navigation = () => {
                   My Agenda
                 </NavLink>
               </li>
+              <li className="my-nav-link">
+                <NavLink
+                  to="/add-patient"
+                  className={path === "/add-patient" ? "active" : ""}
+                >
+                  Add patient
+                </NavLink>
+              </li>
             </ul>
           </div>
         </Col>
