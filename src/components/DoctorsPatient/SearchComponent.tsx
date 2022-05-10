@@ -1,8 +1,8 @@
 const Search = () => {
   return (
-    <form className="d-flex my-2 me-4">
+    <form className="d-flex my-2 me-5">
       <input
-        className="form-control me-2"
+        className="my-form-control"
         type="search"
         placeholder="Search"
         aria-label="Search"

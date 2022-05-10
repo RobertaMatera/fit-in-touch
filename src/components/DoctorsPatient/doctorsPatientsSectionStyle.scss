@@ -7,11 +7,13 @@
   }
   & .my-search-btn {
     color: $dark-green;
-    border-color: $dark-green;
+    border-color: none;
+    border-radius: 100%;
     &:hover {
       color: $white;
       background-color: $dark-green;
       border-color: $dark-green;
+      border-radius: 100%;
     }
   }
 
