@@ -11,7 +11,7 @@ const MainInfoPatient = () => {
           <span className="bg-color">20/06/2022</span>{" "}
         </p>
       </div>
-      <div>
+      <div className="d-flex justify-content-center">
         <img src="https://picsum.photos/950/300" alt="last-diet" />
       </div>
       <div className="mt-5">
