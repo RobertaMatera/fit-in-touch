@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import ContactInfo from "./ContactInfoComponent";
+import MainInfoPatient from "./MainInfoPatientComponent";
 import PatientInfo from "./PatientInfoComponent";
 
 const PatientDetails = () => {
@@ -12,8 +13,7 @@ const PatientDetails = () => {
       </Row>
       <Row className="col-box">
         <Col xs={12} md={8} className="d-flex justify-content-center">
-          {" "}
-          diet + show appointment
+          <MainInfoPatient />
         </Col>
         <Col
           xs={12}

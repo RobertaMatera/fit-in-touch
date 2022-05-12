@@ -50,21 +50,24 @@
     }
   }
 
-  & .patientInfo-box {
+  & .patientInfo-box,
+  .info-container {
     @include box-containers;
-    & .links-box a {
+    & .links-box a,
+    a {
       text-decoration: none;
+
       &:link {
         color: $dark-green;
         background-color: rgba($dark-sand, 30%);
-        padding: 5px;
+        padding: 5px 15px;
+        border-radius: 25px;
       }
       &:visited {
         color: $my-gray;
       }
       &:hover {
         color: $main-blue;
-        text-decoration: underline;
       }
       &:active {
         color: $white;
@@ -79,4 +82,24 @@
   height: 150px;
   overflow: auto;
   background-color: $white;
+}
+
+#main-info-patient {
+  & .title-box {
+    background-color: rgba($light-sand, 30%);
+  }
+  & img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+  }
+  & .bg-color {
+    background-color: rgba($light-sand, 50%);
+  }
+  & .doctor-notes {
+    max-width: 100%;
+    height: 150px;
+    overflow: auto;
+    background-color: $white;
+  }
 }
