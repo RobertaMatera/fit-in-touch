@@ -42,7 +42,7 @@ const Navigation = () => {
                   to="/patients"
                   className={path === "/patients" ? "active" : ""}
                 >
-                  Patients
+                  My Patients
                 </NavLink>
               </li>
               <li className="my-nav-link">
