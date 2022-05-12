@@ -142,7 +142,7 @@ const AddPatient = () => {
 
             <input
               type="submit"
-              value="Submit"
+              value="Add Patient"
               className="align-self-center submit mt-4 mb-5"
             />
           </form>
