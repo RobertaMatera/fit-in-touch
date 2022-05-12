@@ -17,7 +17,7 @@ const PatientInfo = () => {
         <h6>bmi</h6>
         <p>.....</p>
         <span className="d-flex justify-content-center">
-          <Link to="/#details">
+          <Link to="/patients/id/info">
             see more <i className="bi bi-arrow-right-circle"></i>
           </Link>
         </span>

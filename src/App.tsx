@@ -7,6 +7,7 @@ import MainDoctorSection from "./components/MainDoctorSection/MainDoctorSectionC
 import Footer from "./components/Footer/FooterComponent";
 import PatientDetails from "./components/PatientDetails/PatientDetailsComponent";
 import AddPatient from "./components/AddPatient/AddPatientComponent";
+import AllPatientInfo from "./components/PatientDetails/AllPatientInfoComponent";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/patients" element={<DoctorsPatientsSection />} />
         <Route path="/patients/id" element={<PatientDetails />} />
         <Route path="/add-patient" element={<AddPatient />} />
+        <Route path="/patients/id/info" element={<AllPatientInfo />} />
       </Routes>
       <footer>
         <Footer />

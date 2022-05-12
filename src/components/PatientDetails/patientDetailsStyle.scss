@@ -3,6 +3,26 @@
   padding: 15px;
 }
 
+@mixin a-link {
+  color: $dark-green;
+  background-color: rgba($dark-sand, 30%);
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+@mixin a-visited {
+  color: $my-gray;
+}
+
+@mixin a-hover {
+  color: $main-blue;
+}
+
+@mixin a-active {
+  color: $white;
+  background-color: $dark-green;
+}
+
 @media screen and (min-width: 768px) {
   #patient-info-section {
     & .col-box {
@@ -58,20 +78,16 @@
       text-decoration: none;
 
       &:link {
-        color: $dark-green;
-        background-color: rgba($dark-sand, 30%);
-        padding: 5px 15px;
-        border-radius: 25px;
+        @include a-link();
       }
       &:visited {
-        color: $my-gray;
+        @include a-visited();
       }
       &:hover {
-        color: $main-blue;
+        @include a-hover();
       }
       &:active {
-        color: $white;
-        background-color: $dark-green;
+        @include a-active();
       }
     }
   }
@@ -101,5 +117,32 @@
     height: 150px;
     overflow: auto;
     background-color: $white;
+  }
+}
+
+.info-box {
+  max-width: 200px;
+  & p:nth-child(odd) {
+    margin-top: 15px;
+  }
+  & p:nth-child(even) {
+    background-color: rgba($light-sand, 30%);
+  }
+}
+
+.go-back-link a {
+  text-decoration: none;
+
+  &:link {
+    @include a-link;
+  }
+  &:visited {
+    @include a-visited;
+  }
+  &:hover {
+    @include a-hover;
+  }
+  &:active {
+    @include a-active;
   }
 }
