@@ -45,6 +45,11 @@
   }
 
   & .my-logo {
-    width: 30px;
+    max-width: 50px;
+    max-height: 50px;
+    & + p {
+      color: $main-blue;
+      font-weight: bold;
+    }
   }
 }

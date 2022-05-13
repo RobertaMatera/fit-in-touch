@@ -12,11 +12,15 @@ const Navigation = () => {
     <Container fluid id="navigation">
       <Row>
         <Col xs={12} className="d-flex flex-row align-items-center">
-          <img
-            src="/logoFitInTouch.png"
-            alt="fit in touch logo"
-            className="my-logo me-auto"
-          />
+          <div className="d-inline-flex align-items-center me-auto">
+            <img
+              src="/logoFitInTouch.png"
+              alt="fit in touch logo"
+              className="my-logo"
+            />
+            <p className="ms-3">fit in touch</p>
+          </div>
+
           <div className="doctor-name d-flex justify-content-center justify-content-md-end align-baseline mt-3">
             <p>Doctor Name</p>
             {isLoggedIn === "true" ? (
