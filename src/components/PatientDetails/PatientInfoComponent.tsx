@@ -37,13 +37,13 @@ const PatientInfo = () => {
         <h6>
           {" "}
           <Link to="#history">
-            history <i className="bi bi-arrow-right-circle"></i>
+            history <i className="bi bi-arrow-right-circle ms-2"></i>
           </Link>{" "}
         </h6>
         <h6 className="mt-3">
           {" "}
           <Link to="#diet-board">
-            diet-board <i className="bi bi-arrow-right-circle"></i>
+            diet-board <i className="bi bi-arrow-right-circle ms-2"></i>
           </Link>{" "}
         </h6>
       </div>

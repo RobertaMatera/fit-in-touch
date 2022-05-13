@@ -13,7 +13,7 @@ const Navigation = () => {
       <Row>
         <Col xs={12} className="d-flex flex-row align-items-center">
           <img
-            src="logoFitInTouch.png"
+            src="/logoFitInTouch.png"
             alt="fit in touch logo"
             className="my-logo me-auto"
           />

@@ -3,10 +3,16 @@ import { Link } from "react-router-dom";
 
 const AllPatientInfo = () => {
   return (
-    <Container fluid>
+    <Container fluid className="mt-4">
       <Row>
         <Col xs={12}>
           <div className="info-box mx-auto mb-5">
+            <img
+              id="logo-patient-info"
+              src="/logoFitInTouch.png"
+              alt="fit in touch logo"
+            />
+            <h2>name surname</h2>
             <p>age</p>
             <p className="">33</p>
             <p>gender</p>

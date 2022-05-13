@@ -3,24 +3,24 @@
   padding: 15px;
 }
 
-@mixin a-link {
-  color: $dark-green;
-  background-color: rgba($dark-sand, 30%);
+@mixin a-link($color: $dark-green, $background: $light-sand) {
+  color: $color;
+  background-color: $background;
   padding: 5px 15px;
   border-radius: 25px;
 }
 
-@mixin a-visited {
-  color: $my-gray;
+@mixin a-visited($color: $my-gray) {
+  color: $color;
 }
 
-@mixin a-hover {
-  color: $main-blue;
+@mixin a-hover($color: $main-blue) {
+  color: $color;
 }
 
-@mixin a-active {
-  color: $white;
-  background-color: $dark-green;
+@mixin a-active($color: $white, $bg-color: $dark-green) {
+  color: $color;
+  background-color: $bg-color;
 }
 
 @media screen and (min-width: 768px) {
@@ -73,12 +73,17 @@
   & .patientInfo-box,
   .info-container {
     @include box-containers;
+    & .links-box a {
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
     & .links-box a,
     a {
       text-decoration: none;
 
       &:link {
-        @include a-link();
+        @include a-link(rgba($light-sand, 30%));
       }
       &:visited {
         @include a-visited();
@@ -121,28 +126,68 @@
 }
 
 .info-box {
-  max-width: 200px;
+  max-width: 350px;
+  padding: 30px;
+  background-color: rgba($light-sand, 30%);
+  position: relative;
+  & p {
+    padding-left: 15px;
+  }
   & p:nth-child(odd) {
     margin-top: 15px;
   }
   & p:nth-child(even) {
+    margin-top: 8px;
     background-color: rgba($light-sand, 30%);
+  }
+  & p:last-child {
+    margin-bottom: 15px;
+  }
+  & #logo-patient-info {
+    max-width: 50px;
+    max-width: 50px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -30px;
+  }
+  & h2 {
+    font-size: 1rem;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
   }
 }
 
-.go-back-link a {
-  text-decoration: none;
+.go-back-link {
+  position: relative;
+  & a {
+    text-decoration: none;
+    position: absolute;
+    bottom: 39px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    width: 150px;
 
-  &:link {
-    @include a-link;
-  }
-  &:visited {
-    @include a-visited;
-  }
-  &:hover {
-    @include a-hover;
-  }
-  &:active {
-    @include a-active;
+    &:link {
+      @include a-link($color: white, $background: $main-blue);
+    }
+    &:visited {
+      background-color: $my-gray;
+      @include a-visited($white);
+    }
+    &:hover {
+      background-color: $light-sand;
+      @include a-hover($white);
+    }
+    &:active {
+      @include a-active();
+    }
   }
 }
