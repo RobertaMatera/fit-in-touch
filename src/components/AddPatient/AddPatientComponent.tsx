@@ -4,7 +4,10 @@ const AddPatient = () => {
   return (
     <Container fluid id="add-patient-section">
       <Row>
-        <Col xs={12} className="d-flex justify-content-center mt-3">
+        <Col xs={12} className="d-flex justify-content-center my-5">
+          <div id="logo-form">
+            <img src="logoFitInTouch.png" alt="logo fit in touch" />
+          </div>
           <form className="d-flex flex-column">
             <div className="d-flex flex-column flex-md-row">
               <div className="d-flex flex-column">
@@ -143,7 +146,7 @@ const AddPatient = () => {
             <input
               type="submit"
               value="Add Patient"
-              className="align-self-center submit mt-4 mb-5"
+              className="align-self-center submit"
             />
           </form>
         </Col>

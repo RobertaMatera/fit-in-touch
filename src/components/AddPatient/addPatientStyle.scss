@@ -1,7 +1,33 @@
 #add-patient-section {
+  position: relative;
+  & #logo-form img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 2px;
+  }
+  & form {
+    background-color: rgba($light-sand, 30%);
+    padding: 50px 80px 50px 80px;
+    border-radius: 25px;
+  }
+  & label {
+    color: $dark-green;
+  }
   & .new-patient-form {
     border: none;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid $dark-sand;
+    margin-top: 2px;
+    padding: 0 10px;
+    border-radius: 25px;
+    &:focus-visible {
+      outline: 2px solid $light-sand;
+      border-radius: 25px;
+    }
   }
   & .submit {
     background-color: $light-sand;
@@ -9,6 +35,9 @@
     border: none;
     padding: 10px 15px;
     color: $dark-green;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
     &:hover {
       color: $dark-sand;
       background-color: rgba($main-blue, 30%);
