@@ -10,7 +10,7 @@
   border-radius: 25px;
 }
 
-@mixin a-visited($color: $my-gray) {
+@mixin a-visited($color: $white) {
   color: $color;
 }
 
@@ -83,10 +83,11 @@
       text-decoration: none;
 
       &:link {
-        @include a-link(rgba($light-sand, 30%));
+        @include a-link($background: rgba($light-sand, 30%));
       }
       &:visited {
         @include a-visited();
+        background-color: $my-gray;
       }
       &:hover {
         @include a-hover();
