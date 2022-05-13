@@ -11,6 +11,10 @@
   & #exampleInputEmail1 {
     width: 50%;
     margin-left: auto;
+    &:focus-visible {
+      outline: 2px solid $main-blue;
+      border-radius: 25px;
+    }
   }
   & .my-form-control {
     display: block;
@@ -23,7 +27,7 @@
     background-color: transparent;
     background-clip: padding-box;
     border: none;
-    border-bottom: 1px solid $dark-green;
+    border-bottom: 1px solid $main-blue;
     appearance: none;
     border-radius: 0%;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -34,6 +38,7 @@
       position: absolute;
       top: 9px;
       right: 5px;
+      color: $main-blue;
     }
   }
   & .tiny-footer-logo {
