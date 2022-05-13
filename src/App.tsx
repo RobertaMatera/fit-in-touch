@@ -8,6 +8,7 @@ import Footer from "./components/Footer/FooterComponent";
 import PatientDetails from "./components/PatientDetails/PatientDetailsComponent";
 import AddPatient from "./components/AddPatient/AddPatientComponent";
 import AllPatientInfo from "./components/PatientDetails/AllPatientInfoComponent";
+import PatientHistory from "./components/PatientHistory/PatientHistoryComponent";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/patients/id" element={<PatientDetails />} />
         <Route path="/add-patient" element={<AddPatient />} />
         <Route path="/patients/id/info" element={<AllPatientInfo />} />
+        <Route path="/patient/id/history" element={<PatientHistory />} />
       </Routes>
       <footer>
         <Footer />

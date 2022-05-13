@@ -6,8 +6,7 @@
     font-weight: bold;
   }
   & .my-form-control:focus-visible {
-    outline: 2px solid $main-blue;
-    border-radius: 25px;
+    @include search-filter-input;
   }
   & .my-search-btn {
     color: $dark-green;

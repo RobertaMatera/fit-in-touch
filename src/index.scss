@@ -43,3 +43,8 @@ p {
   margin: 0;
   font-size: 0.85em;
 }
+
+@mixin search-filter-input {
+  outline: 2px solid $main-blue;
+  border-radius: 25px;
+}

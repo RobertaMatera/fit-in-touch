@@ -36,7 +36,7 @@ const PatientInfo = () => {
       <div className="links-box">
         <h6>
           {" "}
-          <Link to="#history">
+          <Link to="/patient/id/history">
             history <i className="bi bi-arrow-right-circle ms-2"></i>
           </Link>{" "}
         </h6>

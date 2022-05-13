@@ -1,0 +1,42 @@
+#history-section {
+  & h1,
+  h2 {
+    text-align: center;
+  }
+  & h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $dark-green;
+    font-size: 1.1rem;
+  }
+  & h2 {
+    font-size: 0.9rem;
+    color: $main-blue;
+  }
+  & .my-form-control:focus-visible {
+    @include search-filter-input;
+  }
+  & h6 {
+    font-size: 0.8rem;
+    color: $main-blue;
+    margin-bottom: 0;
+  }
+}
+
+//InfoCheckComponent
+
+.info-value-box {
+  background-color: rgba($light-sand, 10%);
+  padding: 20px 10px;
+  max-width: 830px;
+  display: flex;
+  & .value-box {
+    display: flex;
+    align-items: end;
+    & p {
+      padding: 5px 15px;
+      width: 250px;
+      background-color: rgba($light-sand, 30%);
+    }
+  }
+}
