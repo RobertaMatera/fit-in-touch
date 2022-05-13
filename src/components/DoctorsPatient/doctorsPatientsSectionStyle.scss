@@ -5,6 +5,10 @@
     color: $dark-green;
     font-weight: bold;
   }
+  & .my-form-control:focus-visible {
+    outline: 2px solid $main-blue;
+    border-radius: 25px;
+  }
   & .my-search-btn {
     color: $dark-green;
     border-color: none;
