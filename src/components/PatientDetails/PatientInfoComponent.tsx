@@ -42,7 +42,7 @@ const PatientInfo = () => {
         </h6>
         <h6 className="mt-3">
           {" "}
-          <Link to="#diet-board">
+          <Link to="/patient/id/diet-board">
             diet-board <i className="bi bi-arrow-right-circle ms-2"></i>
           </Link>{" "}
         </h6>

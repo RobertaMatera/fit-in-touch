@@ -9,6 +9,7 @@ import PatientDetails from "./components/PatientDetails/PatientDetailsComponent"
 import AddPatient from "./components/AddPatient/AddPatientComponent";
 import AllPatientInfo from "./components/PatientDetails/AllPatientInfoComponent";
 import PatientHistory from "./components/PatientHistory/PatientHistoryComponent";
+import DietBoard from "./components/DietBoard/DietBoardComponent";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/add-patient" element={<AddPatient />} />
         <Route path="/patients/id/info" element={<AllPatientInfo />} />
         <Route path="/patient/id/history" element={<PatientHistory />} />
+        <Route path="/patient/id/diet-board" element={<DietBoard />} />
       </Routes>
       <footer>
         <Footer />

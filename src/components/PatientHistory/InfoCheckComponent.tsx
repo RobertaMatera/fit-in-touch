@@ -99,6 +99,14 @@ const InfoCheck = () => {
             <p className="new-patient-form mx-auto"> 455..... </p>
           </div>
         </div>
+        <div className="d-flex flex-column m-0 ms-md-4 mb-4">
+          <div className="mx-auto mx-lg-0">
+            <p>Age (yy):</p>
+          </div>
+          <div className="value-box">
+            <p className="new-patient-form mx-auto"> 55..... </p>
+          </div>
+        </div>
       </div>
     </div>
   );

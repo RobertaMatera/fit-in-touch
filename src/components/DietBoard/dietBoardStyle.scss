@@ -1,0 +1,20 @@
+#diet-board {
+  & .my-form-control:focus-visible {
+    @include search-filter-input;
+  }
+  & .check-date {
+    background-color: rgba($light-sand, 30%);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    & h6 {
+      color: $main-blue;
+      font-weight: 500;
+    }
+  }
+  & .diet-file-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
