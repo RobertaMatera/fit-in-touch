@@ -78,16 +78,15 @@
       display: flex;
       align-items: center;
     }
-    & .links-box a,
+    & .links-box h6 > a,
     a {
       text-decoration: none;
-
       &:link {
         @include a-link($background: rgba($light-sand, 30%));
       }
       &:visited {
-        @include a-visited();
-        background-color: $my-gray;
+        @include a-visited;
+        background-color: #8fa0a4 !important;
       }
       &:hover {
         @include a-hover();

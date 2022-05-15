@@ -10,6 +10,7 @@ import AddPatient from "./components/AddPatient/AddPatientComponent";
 import AllPatientInfo from "./components/PatientDetails/AllPatientInfoComponent";
 import PatientHistory from "./components/PatientHistory/PatientHistoryComponent";
 import DietBoard from "./components/DietBoard/DietBoardComponent";
+import LastDiet from "./components/LastDiet/LastDietComponent";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/patients/id/info" element={<AllPatientInfo />} />
         <Route path="/patient/id/history" element={<PatientHistory />} />
         <Route path="/patient/id/diet-board" element={<DietBoard />} />
+        <Route path="/patient/id/last-diet" element={<LastDiet />} />
       </Routes>
       <footer>
         <Footer />

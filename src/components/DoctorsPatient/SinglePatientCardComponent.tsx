@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SinglePatientCard = () => {
   const navigate = useNavigate();
@@ -32,9 +32,11 @@ const SinglePatientCard = () => {
             <p> 30/06/2022 </p>
           </div>
           <hr />
-          <button type="button" className="btn btn-card">
-            Last Diet
-          </button>
+          <Link to="/patient/id/last-diet">
+            <button type="button" className="btn btn-card">
+              Last Diet
+            </button>
+          </Link>
         </div>
       </div>
     </div>

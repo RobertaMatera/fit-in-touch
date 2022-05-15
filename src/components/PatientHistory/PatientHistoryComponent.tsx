@@ -14,6 +14,7 @@ const PatientHistory = () => {
             <h2>history of</h2>
             <h1>name surname</h1>
           </div>
+
           <div className="d-md-flex flex-md-row justify-content-center mt-3 mb-5">
             <Search />
             <Filter />

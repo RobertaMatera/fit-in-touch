@@ -1,0 +1,54 @@
+#last-diet {
+  & h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $dark-green;
+    font-size: 1.1rem;
+  }
+  & h2 {
+    font-size: 0.9rem;
+    color: $main-blue;
+  }
+  & h6 {
+    font-size: 0.8rem;
+    color: $main-blue;
+  }
+  & .separation-line {
+    max-width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  & .img-last-diet {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  & .go-back-link {
+    width: 150px;
+  }
+
+  & > a {
+    &:link {
+      text-decoration: none;
+      position: absolute;
+      bottom: 39px;
+      margin-right: auto;
+      margin-left: auto;
+      left: 0;
+      right: 0;
+      width: 150px;
+    }
+    &:visited {
+      background-color: $my-gray;
+      color: $white;
+    }
+    & :hover {
+      background-color: $light-sand;
+      color: $white;
+    }
+    &:active {
+      color: $white;
+      background-color: $dark-green;
+    }
+  }
+}
