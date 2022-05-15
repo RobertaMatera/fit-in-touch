@@ -25,4 +25,61 @@
       background-color: $dark-green;
     }
   }
+  & .rbc-calendar {
+    height: 500px;
+    max-width: 100%;
+    & .rbc-month-view {
+      border: transparent;
+      background-color: rgba($light-sand, 30%);
+      padding: 10px;
+      & .rbc-header {
+        border-bottom: 1px solid $white;
+        color: $dark-sand;
+      }
+      & .rbc-month-row + .rbc-month-row {
+        border-top: 1px solid $white;
+      }
+    }
+    & .rbc-date-cell {
+      padding: 10px;
+      color: $dark-green;
+      & > button:hover {
+        background-color: $white;
+        border-radius: 100%;
+        cursor: pointer;
+      }
+    }
+    & .rbc-today {
+      background-color: rgba($dark-sand, 30%);
+    }
+    & .rbc-day-bg + .rbc-day-bg {
+      border-left: 1px solid $white;
+    }
+
+    & .rbc-off-range-bg {
+      background-color: rgba($my-gray, 30%);
+    }
+  }
+  & .rbc-btn-group button {
+    border: none;
+    color: $main-blue;
+    &:hover {
+      background-color: rgba($light-sand, 30%);
+      border-radius: 25px;
+    }
+    &:focus,
+    &.rbc-active {
+      background-color: rgba($light-sand, 30%);
+      border-radius: 25px;
+    }
+    &:active {
+      background-color: $dark-green;
+      color: $white;
+    }
+  }
+  & .rbc-toolbar-label {
+    color: $dark-green;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }

@@ -60,6 +60,7 @@ const Agenda = () => {
         <div className="date-input-container">
           <div className="d-block d-lg-flex">
             <input
+              className="me-lg-5"
               type="text"
               placeholder="Add Title"
               value={newEvent.title}
@@ -68,6 +69,7 @@ const Agenda = () => {
               }
             />
             <DatePicker
+              className="me-lg-5"
               placeholderText="Start Date"
               selected={newEvent.start}
               onChange={(start: any) => setNewEvent({ ...newEvent, start })}
@@ -89,7 +91,6 @@ const Agenda = () => {
         events={allEvents}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500, margin: "50px" }}
       />
     </div>
   );
