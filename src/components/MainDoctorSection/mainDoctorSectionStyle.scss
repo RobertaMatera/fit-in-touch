@@ -26,8 +26,11 @@
     }
   }
   & .rbc-calendar {
-    height: 500px;
+    height: 550px;
     max-width: 100%;
+    & .rbc-toolbar {
+      m\rgin-bottom: 20px;
+    }
     & .rbc-month-view {
       border: transparent;
       background-color: rgba($light-sand, 30%);
@@ -81,5 +84,72 @@
     color: $dark-green;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  & .rbc-event {
+    border: none;
+    box-sizing: border-box;
+    box-shadow: none;
+    margin: 0;
+    padding: 2px 5px;
+    background-color: $dark-green;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    & .rbc-event-content {
+      font-size: 0.5rem;
+    }
+  }
+  & .rbc-time-header {
+    display: none;
+  }
+  & .rbc-label {
+    font-size: 0.8rem;
+    color: $dark-sand;
+  }
+  &
+    div.rbc-agenda-content
+    > table.rbc-agenda-table
+    > tbody
+    > tr:nth-child(odd) {
+    background-color: rgba($light-sand, 30%);
+  }
+  & .rbc-header {
+    color: $dark-sand;
+  }
+  & .rbc-agenda-view table.rbc-agenda-table {
+    border: $white;
+  }
+  & .react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+    background-color: rgba($light-sand, 30%);
+  }
+  & .react-datepicker__day--selected {
+    border-radius: 25px;
+    background-color: $dark-sand;
+  }
+  & .react-datepicker__day:hover {
+    border-radius: 25px;
+    background-color: $light-sand;
+    color: $white;
+  }
+  &
+    .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::after {
+    border-bottom-color: #f8eee7;
+  }
+  & .react-datepicker-popper {
+    z-index: 50;
+  }
+  & .react-datepicker__current-month,
+  .react-datepicker__day-name {
+    color: $dark-sand;
+  }
+  & .react-datepicker__navigation {
+    border-color: $dark-sand;
+    top: 14px;
+    &:hover *::before {
+      border-color: $dark-sand;
+    }
   }
 }
