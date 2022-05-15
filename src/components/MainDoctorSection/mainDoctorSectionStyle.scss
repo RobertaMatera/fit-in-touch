@@ -1,0 +1,28 @@
+#mainDoctorSection {
+  & .date-input-container {
+    input {
+      margin-top: 5px;
+      border: none;
+      border-bottom: 2px solid $main-blue;
+      padding: 0.4rem 0.75rem;
+      &:focus-visible {
+        outline: 2px solid $main-blue;
+        border-radius: 25px;
+      }
+    }
+  }
+  & .add-event-btn {
+    margin-top: 20px;
+    padding: 5px 15px;
+    border: transparent;
+    border-radius: 25px;
+    background-color: $my-gray;
+    color: $white;
+    &:hover {
+      background-color: $light-sand;
+    }
+    &:focus {
+      background-color: $dark-green;
+    }
+  }
+}

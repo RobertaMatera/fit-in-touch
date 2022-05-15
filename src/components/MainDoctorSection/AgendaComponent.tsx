@@ -56,30 +56,30 @@ const Agenda = () => {
 
   return (
     <div className=" mb-5">
-      <div className="text-center">
-        <h4 className="mb-3">add new appointment</h4>
-        <div>
-          <input
-            type="text"
-            placeholder="Add Title"
-            style={{ width: "20%", marginRight: "10px" }}
-            value={newEvent.title}
-            onChange={(e) =>
-              setNewEvent({ ...newEvent, title: e.target.value })
-            }
-          />
-          <DatePicker
-            placeholderText="Start Date"
-            selected={newEvent.start}
-            onChange={(start: any) => setNewEvent({ ...newEvent, start })}
-          />
-          <DatePicker
-            placeholderText="End Date"
-            selected={newEvent.end}
-            onChange={(end: any) => setNewEvent({ ...newEvent, end })}
-          />
-          <button style={{ marginTop: "10px" }} onClick={handleAddEvent}>
-            Add Event
+      <div className="text-center mt-4 mb-5">
+        <div className="date-input-container">
+          <div className="d-block d-lg-flex">
+            <input
+              type="text"
+              placeholder="Add Title"
+              value={newEvent.title}
+              onChange={(e) =>
+                setNewEvent({ ...newEvent, title: e.target.value })
+              }
+            />
+            <DatePicker
+              placeholderText="Start Date"
+              selected={newEvent.start}
+              onChange={(start: any) => setNewEvent({ ...newEvent, start })}
+            />
+            <DatePicker
+              placeholderText="End Date"
+              selected={newEvent.end}
+              onChange={(end: any) => setNewEvent({ ...newEvent, end })}
+            />
+          </div>
+          <button className="add-event-btn" onClick={handleAddEvent}>
+            add event
           </button>
         </div>
       </div>
