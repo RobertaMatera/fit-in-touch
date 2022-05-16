@@ -110,14 +110,22 @@
   & .title-box {
     background-color: rgba($light-sand, 30%);
   }
+  & .diet-img-container {
+    position: relative;
+  }
   & img {
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
-  & .bg-color {
-    background-color: rgba($light-sand, 50%);
+  & h1 {
+    position: absolute;
+    top: 49%;
+    color: $dark-green;
+    background-color: rgba($white, 0.5);
+    padding: 1%;
   }
+
   & .doctor-notes {
     max-width: 100%;
     height: 150px;

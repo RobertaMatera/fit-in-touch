@@ -1,20 +1,19 @@
 const MainInfoPatient = () => {
   return (
     <div id="main-info-patient" className="d-block">
-      <div className="mb-3 text-center title-box">
+      <div className="d-flex justify-content-center diet-img-container">
+        <h1>name surname</h1>
+
+        <img src="https://picsum.photos/950/300" alt="last-diet" />
+      </div>
+      <div className="my-4 text-center title-box">
         <p>
           {" "}
           <b>next appointment</b>
         </p>
-        <p>
-          {" "}
-          <span className="bg-color">20/06/2022</span>{" "}
-        </p>
+        <p>20/06/2022</p>
       </div>
-      <div className="d-flex justify-content-center">
-        <img src="https://picsum.photos/950/300" alt="last-diet" />
-      </div>
-      <div className="mt-5">
+      <div>
         <p>
           {" "}
           <b>my notes</b>
