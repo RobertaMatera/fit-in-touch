@@ -99,9 +99,11 @@ div.icon-wrapper {
 
 .btn-card {
   color: $dark-green;
+  border-radius: 100px;
   &:hover {
     color: $white !important;
-    background-color: $my-gray;
+    background-color: $dark-green;
+    border-radius: 100px;
   }
 }
 
