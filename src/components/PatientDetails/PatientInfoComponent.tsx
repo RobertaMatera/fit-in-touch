@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const PatientInfo = () => {
   return (
     <>
-      <div className="info-container -0 mt-3 ">
+      <div className="info-container  mt-3 ">
         <h6>age</h6>
         <p>33</p>
         <h6>gender</h6>
@@ -17,8 +17,8 @@ const PatientInfo = () => {
         <h6>bmi</h6>
         <p>.....</p>
         <span className="d-flex justify-content-center">
-          <Link to="/patients/id/info">
-            see more <i className="bi bi-arrow-right-circle"></i>
+          <Link to="/patients/id/info" style={{ padding: "0.5rem 1rem" }}>
+            see more <i className="bi bi-arrow-right-circle my-auto"></i>
           </Link>
         </span>
       </div>
@@ -36,14 +36,14 @@ const PatientInfo = () => {
       <div className="links-box">
         <h6>
           {" "}
-          <Link to="/patient/id/history">
-            history <i className="bi bi-arrow-right-circle ms-2"></i>
+          <Link to="/patient/id/history" style={{ padding: "0.5rem 1rem" }}>
+            history <i className="bi bi-arrow-right-circle ms-auto"></i>
           </Link>{" "}
         </h6>
         <h6 className="mt-3">
           {" "}
-          <Link to="/patient/id/diet-board">
-            diet-board <i className="bi bi-arrow-right-circle ms-2"></i>
+          <Link to="/patient/id/diet-board" style={{ padding: "0.5rem 1rem" }}>
+            diet-board <i className="bi bi-arrow-right-circle ms-auto"></i>
           </Link>{" "}
         </h6>
       </div>
