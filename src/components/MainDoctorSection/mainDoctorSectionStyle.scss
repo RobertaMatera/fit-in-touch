@@ -13,12 +13,11 @@
   }
   & .add-event-btn {
     margin-top: 20px;
-    padding: 5px 15px;
+    padding: 0.5rem 1rem;
     border: transparent;
     border-radius: 25px;
     background-color: $dark-green;
     color: $white;
-    padding: 0.5rem 1rem;
     &:hover {
       background-color: $my-gray;
     }

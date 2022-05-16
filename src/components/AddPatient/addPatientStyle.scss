@@ -30,21 +30,20 @@
     }
   }
   & .submit {
-    background-color: $light-sand;
-    border-radius: 25px;
+    background-color: $dark-green;
+    border-radius: 50px;
     border: none;
-    padding: 10px 15px;
-    color: $dark-green;
+    padding: 0.5rem 1rem;
+    color: $white;
     position: absolute;
     bottom: 0;
     margin-bottom: 40px;
     &:hover {
-      color: $dark-sand;
-      background-color: rgba($main-blue, 30%);
+      background-color: $my-gray;
     }
     &:focus {
-      background-color: $main-blue;
-      color: $white;
+      background-color: $my-gray;
+      box-shadow: 0px 0px 10px 1px $my-gray;
     }
   }
 }
