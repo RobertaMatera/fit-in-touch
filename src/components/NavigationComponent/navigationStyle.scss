@@ -1,3 +1,12 @@
+@keyframes expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 #navigation {
   & .nav-container {
     padding: 30px;
@@ -5,18 +14,37 @@
 
   & li.my-nav-link > a {
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.2rem 1rem;
     color: $dark-green;
     text-decoration: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out border-color 0.15s ease-in-out;
 
     &:visited {
       color: $my-gray;
     }
 
     &:hover {
-      color: $light-sand;
+      color: $dark-sand;
+      position: relative;
+      text-shadow: 0px 0px 12px $light-sand;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        animation: expand 0.5s ease-in-out;
+        //transform: scaleX(0);
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: $main-blue;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+    }
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
 
     &:active {
@@ -25,12 +53,10 @@
 
     &.active {
       color: $dark-green !important;
-      background-color: rgba($light-sand, 50%);
-      padding: 0.5rem 1rem;
-      border-radius: 50%;
+      font-weight: bold;
+      border-bottom: 2px solid black;
     }
   }
-
   & .doctor-name {
     padding: 8px;
   }

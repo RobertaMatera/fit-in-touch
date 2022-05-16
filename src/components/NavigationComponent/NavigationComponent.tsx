@@ -41,7 +41,7 @@ const Navigation = () => {
         <Col xs={12}>
           <div className="d-flex flex-row justify-content-center nav-container">
             <ul className="nav">
-              <li className="my-nav-link">
+              <li className="my-nav-link ">
                 <NavLink
                   to="/patients"
                   className={path === "/patients" ? "active" : ""}
