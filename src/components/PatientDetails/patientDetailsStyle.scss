@@ -175,17 +175,16 @@
     left: 0;
     right: 0;
     width: 150px;
+    padding: 0.5rem 1rem !important;
 
     &:link {
-      @include a-link($color: white, $background: $main-blue);
+      @include a-link($color: white, $background: $dark-green);
     }
     &:visited {
-      background-color: $my-gray;
-      @include a-visited($white);
+      @include a-visited($color: white, $background: $my-gray);
     }
     &:hover {
-      background-color: $light-sand;
-      @include a-hover($white);
+      @include a-hover($color: white, $background: $dark-sand);
     }
     &:active {
       @include a-active();
