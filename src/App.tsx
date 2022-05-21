@@ -1,6 +1,6 @@
 import "./App.scss";
 import "react-big-calendar/lib/sass/styles.scss";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/NavigationComponent/NavigationComponent";
 import DoctorsPatientsSection from "./components/DoctorsPatient/DoctorsPatientsSectionComponent";
 import MainDoctorSection from "./components/MainDoctorSection/MainDoctorSectionComponent";
@@ -12,26 +12,45 @@ import PatientHistory from "./components/PatientHistory/PatientHistoryComponent"
 import DietBoard from "./components/DietBoard/DietBoardComponent";
 import LastDiet from "./components/LastDiet/LastDietComponent";
 
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getPatientsAction } from "./redux/services/patients";
+
 function App() {
+  const patientsList: any = useSelector((state: any) => {
+    return state.patients.patients;
+  });
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPatientsAction());
+  }, [dispatch]);
+
   return (
-    <div>
-      <header>
-        <Navigation />
-      </header>
-      <Routes>
-        <Route path="/" element={<MainDoctorSection />} />
-        <Route path="/patients" element={<DoctorsPatientsSection />} />
-        <Route path="/patients/id" element={<PatientDetails />} />
-        <Route path="/add-patient" element={<AddPatient />} />
-        <Route path="/patients/id/info" element={<AllPatientInfo />} />
-        <Route path="/patient/id/history" element={<PatientHistory />} />
-        <Route path="/patient/id/diet-board" element={<DietBoard />} />
-        <Route path="/patient/id/last-diet" element={<LastDiet />} />
-      </Routes>
-      <footer>
-        <Footer />
-      </footer>
-    </div>
+    <BrowserRouter>
+      <div>
+        <header>
+          <Navigation />
+        </header>
+        <Routes>
+          <Route path="/" element={<MainDoctorSection />} />
+          <Route
+            path="/patients"
+            element={<DoctorsPatientsSection patients={patientsList} />}
+          />
+          <Route path="/patients/id" element={<PatientDetails />} />
+          <Route path="/add-patient" element={<AddPatient />} />
+          <Route path="/patients/id/info" element={<AllPatientInfo />} />
+          <Route path="/patient/id/history" element={<PatientHistory />} />
+          <Route path="/patient/id/diet-board" element={<DietBoard />} />
+          <Route path="/patient/id/last-diet" element={<LastDiet />} />
+        </Routes>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 

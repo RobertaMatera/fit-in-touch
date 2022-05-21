@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
-const SinglePatientCard = () => {
+const SinglePatientCard = ({ patientName, patientSurname }: any) => {
   const navigate = useNavigate();
 
   const redirectTo = () => navigate("/patients/id");
@@ -26,7 +26,9 @@ const SinglePatientCard = () => {
       <div className="text-container">
         <div>
           {" "}
-          <h3 className="mt-4 mb-2">Name Surname</h3>
+          <h3 className="mt-4 mb-2">
+            {patientName} {patientSurname}
+          </h3>
           <div className="d-inline-flex align-self-center mt-1">
             <i className="bi bi-calendar me-2"></i>
             <p> 30/06/2022 </p>

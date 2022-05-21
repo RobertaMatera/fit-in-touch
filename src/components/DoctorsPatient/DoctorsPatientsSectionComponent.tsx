@@ -3,7 +3,7 @@ import SinglePatientCard from "./SinglePatientCardComponent";
 import Search from "./SearchComponent";
 import Filter from "./FilterComponent";
 
-const DoctorsPatientsSection = () => {
+const DoctorsPatientsSection = ({ patients }: any) => {
   return (
     <Container fluid id="DoctorsPatientsSection">
       <Row>
@@ -13,54 +13,21 @@ const DoctorsPatientsSection = () => {
         </Col>
       </Row>
       <Row className="d-flex justify-content-center row-card mb-5">
-        <Col
-          xs={12}
-          md={6}
-          lg={4}
-          xl={3}
-          className="d-flex justify-content-center mb-3"
-        >
-          <SinglePatientCard />
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          lg={4}
-          xl={3}
-          className="d-flex justify-content-center mb-3"
-        >
-          <SinglePatientCard />
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          lg={4}
-          xl={3}
-          className="d-flex justify-content-center mb-3"
-        >
-          <SinglePatientCard />
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          lg={4}
-          xl={3}
-          className="d-flex justify-content-center mb-3"
-        >
-          <SinglePatientCard />
-        </Col>
-        <Col
-          xs={12}
-          md={6}
-          lg={4}
-          xl={3}
-          className="d-flex justify-content-center mb-3"
-        >
-          <SinglePatientCard />
-        </Col>
-        <Col xs={12} md={6} lg={3} className="d-flex justify-content-center">
-          <SinglePatientCard />
-        </Col>
+        {patients.map((patient: any) => (
+          <Col
+            xs={12}
+            md={6}
+            lg={4}
+            xl={3}
+            className="d-flex justify-content-center mb-3"
+          >
+            <SinglePatientCard
+              key={patient.id}
+              patientName={patient.name}
+              patientSurname={patient.surname}
+            />
+          </Col>
+        ))}
       </Row>
       <Row>
         <Col xs={12} className="d-flex justify-content-center mb-5">
