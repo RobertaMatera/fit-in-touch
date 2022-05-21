@@ -1,8 +1,10 @@
-const MainInfoPatient = () => {
+const MainInfoPatient = ({ patient }: any) => {
   return (
     <div id="main-info-patient" className="d-block">
       <div className="d-flex justify-content-center diet-img-container">
-        <h1>name surname</h1>
+        <h1>
+          {patient.name} {patient.surname}
+        </h1>
 
         <img src="https://picsum.photos/950/300" alt="last-diet" />
       </div>

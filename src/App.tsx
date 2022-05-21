@@ -39,12 +39,15 @@ function App() {
             path="/patients"
             element={<DoctorsPatientsSection patients={patientsList} />}
           />
-          <Route path="/patients/id" element={<PatientDetails />} />
+          <Route
+            path="/patients/:id"
+            element={<PatientDetails patientData={patientsList} />}
+          />
           <Route path="/add-patient" element={<AddPatient />} />
-          <Route path="/patients/id/info" element={<AllPatientInfo />} />
+          <Route path="/patients/:id/info" element={<AllPatientInfo />} />
           <Route path="/patient/id/history" element={<PatientHistory />} />
           <Route path="/patient/id/diet-board" element={<DietBoard />} />
-          <Route path="/patient/id/last-diet" element={<LastDiet />} />
+          <Route path="/patient/:id/last-diet" element={<LastDiet />} />
         </Routes>
         <footer>
           <Footer />

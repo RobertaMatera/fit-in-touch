@@ -2,13 +2,20 @@ import { Container, Row, Col } from "react-bootstrap";
 import ContactInfo from "./ContactInfoComponent";
 import MainInfoPatient from "./MainInfoPatientComponent";
 import PatientInfo from "./PatientInfoComponent";
+import { useParams } from "react-router-dom";
 
-const PatientDetails = () => {
+const PatientDetails = ({ patientData }: any) => {
+  const params = useParams();
+  const paramsId: string = params.id!;
+  const id = parseInt(paramsId) - 1;
+
+  const patientInfo = patientData[id];
+  console.log(patientInfo);
   return (
     <Container fluid id="patient-info-section" className="mb-4">
       <Row className="col-box">
         <Col xs={12} md={8} className="d-flex justify-content-center">
-          <MainInfoPatient />
+          <MainInfoPatient patient={patientInfo} />
         </Col>
         <Col
           xs={12}
@@ -18,7 +25,7 @@ const PatientDetails = () => {
           {" "}
           <div className="contactInfo-box">
             <h6>contact info</h6>
-            <ContactInfo />
+            <ContactInfo contactInfo={patientInfo.contactInfo} />
           </div>
         </Col>
 
