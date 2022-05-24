@@ -20,8 +20,9 @@ const DoctorsPatientsSection = ({ patients }: any) => {
             lg={4}
             xl={3}
             className="d-flex justify-content-center mb-3"
+            key={patient.id}
           >
-            <SinglePatientCard key={patient.id} patientInfo={patient} />
+            <SinglePatientCard patientInfo={patient} />
           </Col>
         ))}
       </Row>
