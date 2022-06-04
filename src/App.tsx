@@ -15,6 +15,7 @@ import LastDiet from "./components/LastDiet/LastDietComponent";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getPatientsAction } from "./redux/services/patients";
+import ScrollToTop from "./components/ScrollToTopComponent";
 
 function App() {
   const patientsList: any = useSelector((state: any) => {
@@ -29,30 +30,35 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
-        <header>
-          <Navigation />
-        </header>
-        <Routes>
-          <Route path="/" element={<MainDoctorSection />} />
-          <Route
-            path="/patients"
-            element={<DoctorsPatientsSection patients={patientsList} />}
-          />
-          <Route
-            path="/patients/:id"
-            element={<PatientDetails patientData={patientsList} />}
-          />
-          <Route path="/add-patient" element={<AddPatient />} />
-          <Route path="/patients/:id/info" element={<AllPatientInfo />} />
-          <Route path="/patient/:id/history" element={<PatientHistory />} />
-          <Route path="/patient/:id/diet-board" element={<DietBoard />} />
-          <Route path="/patient/:id/last-diet" element={<LastDiet />} />
-        </Routes>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <ScrollToTop>
+        <div>
+          <header>
+            <Navigation />
+          </header>
+          <Routes>
+            <Route path="/" element={<MainDoctorSection />} />
+            <Route
+              path="/patients"
+              element={<DoctorsPatientsSection patients={patientsList} />}
+            />
+            <Route
+              path="/patients/:id"
+              element={<PatientDetails patientData={patientsList} />}
+            />
+            <Route path="/add-patient" element={<AddPatient />} />
+            <Route
+              path="/patients/:id/info"
+              element={<AllPatientInfo patientInfoProps={patientsList} />}
+            />
+            <Route path="/patient/:id/history" element={<PatientHistory />} />
+            <Route path="/patient/:id/diet-board" element={<DietBoard />} />
+            <Route path="/patient/:id/last-diet" element={<LastDiet />} />
+          </Routes>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </ScrollToTop>
     </BrowserRouter>
   );
 }

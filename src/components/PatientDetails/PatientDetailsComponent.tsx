@@ -10,7 +10,7 @@ const PatientDetails = ({ patientData }: any) => {
   const id = parseInt(paramsId) - 1;
 
   const patientInfo = patientData[id];
-  console.log(patientInfo);
+
   return (
     <Container fluid id="patient-info-section" className="mb-4">
       <Row className="col-box">

@@ -1,19 +1,15 @@
 import { Link } from "react-router-dom";
+import getAge from "../../helpers/getDate";
 
 const PatientInfo = ({ patientInfo }: any) => {
-  const getAge = () => {
-    const dateOfBirth = patientInfo.dateOfBirth;
-    const today = new Date();
-    const birthDate = new Date(dateOfBirth);
-    const age = today.getFullYear() - birthDate.getFullYear();
-    return age.toString();
-  };
+  const dateOfBirth = patientInfo.dateOfBirth;
+  const age = getAge(dateOfBirth);
 
   return (
     <>
       <div className="info-container  mt-3 ">
         <h6>age</h6>
-        <p>{getAge()}</p>
+        <p>{age}</p>
         <h6>gender</h6>
         <p>{patientInfo.gender}</p>
         <h6>height</h6>

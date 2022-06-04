@@ -1,7 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import getAge from "../../helpers/getDate";
 
-const AllPatientInfo = () => {
+const AllPatientInfo = ({ patientInfoProps }: any) => {
+  const params = useParams();
+  const paramsId: string = params.id!;
+  const id = parseInt(paramsId) - 1;
+
+  const patientInfo = patientInfoProps[id];
+
+  const dateOfBirth = patientInfo.dateOfBirth;
+  const age = getAge(dateOfBirth);
+
   return (
     <Container fluid className="mt-4">
       <Row>
@@ -14,30 +24,30 @@ const AllPatientInfo = () => {
             />
             <h2>name surname</h2>
             <p>age</p>
-            <p className="">33</p>
+            <p className="">{age}</p>
             <p>gender</p>
-            <p className="">female</p>
+            <p className="">{patientInfo.gender}</p>
             <p>height</p>
-            <p className="">162 cm</p>
+            <p className="">{patientInfo.height} cm</p>
             <p>weight</p>
-            <p className="">70 kg</p>
+            <p className="">{patientInfo.weight} kg</p>
             <p>weist circumference</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.WC} cm</p>
             <p>Body Mass Indicator</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.BMI}</p>
             <p>Visceral Adipose Tissue</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.VAT}</p>
             <p>Free Fat Mass</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.FFM}</p>
             <p>Fat Mass</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.FM}</p>
             <p>PHI</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.PHI}</p>
             <p>B IVA</p>
-            <p className="">....</p>
+            <p className="">{patientInfo.B_IVA}</p>
           </div>
           <div className="go-back-link text-center mb-5">
-            <Link to="/patients/id">go back</Link>
+            <Link to={"/patients/" + patientInfo.id}>go back</Link>
           </div>
         </Col>
       </Row>
