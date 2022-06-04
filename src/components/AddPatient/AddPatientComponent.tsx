@@ -56,6 +56,50 @@ const AddPatient = () => {
             <div className="d-flex flex-column flex-md-row">
               <div className="d-flex flex-column">
                 <label>
+                  <p>Phone Number</p>
+                </label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  className="new-patient-form mb-4"
+                />
+              </div>
+              <div className="d-flex flex-column m-0 ms-md-5">
+                <label>
+                  <p>Mail</p>
+                </label>
+                <input
+                  type="text"
+                  name="email"
+                  className="new-patient-form mb-4"
+                />
+              </div>
+            </div>
+            <div className="d-flex flex-column flex-md-row">
+              <div className="d-flex flex-column">
+                <label>
+                  <p>Address</p>
+                </label>
+                <input
+                  type="text"
+                  name="address"
+                  className="new-patient-form mb-4"
+                />
+              </div>
+              <div className="d-flex flex-column m-0 ms-md-5">
+                <label>
+                  <p>Payment Method</p>
+                </label>
+                <input
+                  type="text"
+                  name="paymentMethod"
+                  className="new-patient-form mb-4"
+                />
+              </div>
+            </div>
+            <div className="d-flex flex-column flex-md-row">
+              <div className="d-flex flex-column">
+                <label>
                   <p>Height (cm):</p>
                 </label>
                 <input
