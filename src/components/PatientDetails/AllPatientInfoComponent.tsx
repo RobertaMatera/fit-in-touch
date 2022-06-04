@@ -9,7 +9,7 @@ const AllPatientInfo = () => {
           <div className="info-box mx-auto mb-5">
             <img
               id="logo-patient-info"
-              src="/logoFitInTouch.png"
+              src="/my-logo.png"
               alt="fit in touch logo"
             />
             <h2>name surname</h2>

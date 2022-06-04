@@ -27,7 +27,7 @@ const Footer = () => {
           className="d-flex justify-content-center mt-5 mt-lg-0"
         >
           <img
-            src="/logoFitInTouch.png"
+            src="/my-logo.png"
             alt="fit in touch logo"
             className="footer-logo"
           />
@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="d-flex flex-row">
             {" "}
             <img
-              src="/logoFitInTouch.png"
+              src="/my-logo.png"
               alt="fit in touch logo"
               className="tiny-footer-logo"
             />

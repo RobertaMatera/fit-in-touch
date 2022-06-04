@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { Link as NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -13,8 +13,8 @@ const Navigation = () => {
       <Row>
         <Col xs={12} className="d-flex flex-row align-items-center">
           <div className="d-inline-flex align-items-center me-auto">
-            <img
-              src="/logoFitInTouch.png"
+            <Image
+              src="my-logo.png"
               alt="fit in touch logo"
               className="my-logo"
             />

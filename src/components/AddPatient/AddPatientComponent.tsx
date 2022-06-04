@@ -6,7 +6,7 @@ const AddPatient = () => {
       <Row>
         <Col xs={12} className="d-flex justify-content-center my-5">
           <div id="logo-form">
-            <img src="logoFitInTouch.png" alt="logo fit in touch" />
+            <img src="my-logo.png" alt="logo fit in touch" />
           </div>
           <form className="d-flex flex-column">
             <div className="d-flex flex-column flex-md-row">
