@@ -8,7 +8,7 @@ const AllPatientInfo = ({ patientInfoProps }: any) => {
   const id = parseInt(paramsId) - 1;
 
   const patientInfo = patientInfoProps[id];
-
+  console.log(patientInfo);
   const dateOfBirth = patientInfo.dateOfBirth;
   const age = getAge(dateOfBirth);
 
@@ -22,29 +22,35 @@ const AllPatientInfo = ({ patientInfoProps }: any) => {
               src="/my-logo.png"
               alt="fit in touch logo"
             />
-            <h2>name surname</h2>
-            <p>age</p>
+            <h2 className="text-center">
+              {patientInfo.name} {patientInfo.surname}
+            </h2>
+            <p>age (YY)</p>
             <p className="">{age}</p>
             <p>gender</p>
             <p className="">{patientInfo.gender}</p>
-            <p>height</p>
-            <p className="">{patientInfo.height} cm</p>
-            <p>weight</p>
-            <p className="">{patientInfo.weight} kg</p>
-            <p>weist circumference</p>
-            <p className="">{patientInfo.WC} cm</p>
+            <p>height (cm)</p>
+            <p className="">{patientInfo.height}</p>
+            <p>weight (kg)</p>
+            <p className="">{patientInfo.weight}</p>
+            <p>weist circumference (cm)</p>
+            <p className="">{patientInfo.WC}</p>
             <p>Body Mass Indicator</p>
             <p className="">{patientInfo.BMI}</p>
-            <p>Visceral Adipose Tissue</p>
+            <p>Visceral Adipose Tissue (lt)</p>
             <p className="">{patientInfo.VAT}</p>
-            <p>Free Fat Mass</p>
+            <p>Free Fat Mass (kg)</p>
             <p className="">{patientInfo.FFM}</p>
-            <p>Fat Mass</p>
+            <p>Fat Mass (kg)</p>
             <p className="">{patientInfo.FM}</p>
-            <p>PHI</p>
+            <p>PHI (°)</p>
             <p className="">{patientInfo.PHI}</p>
-            <p>B IVA</p>
+            <p>B IVA (Ω)</p>
             <p className="">{patientInfo.B_IVA}</p>
+            <p>total body water (lt)</p>
+            <p className="">{patientInfo.TBW}</p>
+            <p>extra cellular water (lt)</p>
+            <p className="">{patientInfo.EXC}</p>
           </div>
           <div className="go-back-link text-center mb-5">
             <Link to={"/patients/" + patientInfo.id}>go back</Link>
