@@ -37,7 +37,7 @@ const PatientDetails = ({ patientData }: any) => {
           {" "}
           <div className="patientInfo-box">
             <h6>patient info</h6>
-            <PatientInfo />
+            <PatientInfo patientInfo={patientInfo} />
           </div>
         </Col>
       </Row>

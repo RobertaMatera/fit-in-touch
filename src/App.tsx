@@ -45,8 +45,8 @@ function App() {
           />
           <Route path="/add-patient" element={<AddPatient />} />
           <Route path="/patients/:id/info" element={<AllPatientInfo />} />
-          <Route path="/patient/id/history" element={<PatientHistory />} />
-          <Route path="/patient/id/diet-board" element={<DietBoard />} />
+          <Route path="/patient/:id/history" element={<PatientHistory />} />
+          <Route path="/patient/:id/diet-board" element={<DietBoard />} />
           <Route path="/patient/:id/last-diet" element={<LastDiet />} />
         </Routes>
         <footer>
