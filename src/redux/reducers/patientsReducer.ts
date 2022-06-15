@@ -4,6 +4,7 @@ import {
   FETCH_PATIENTS_DATA_ERROR,
   FETCH_PATIENTS_DATA_REQUEST,
   FETCH_PATIENTS_DATA_SUCCESS,
+  ADD_PATIENT,
 } from "../actions/types";
 
 const patientReducer = (state = initialState.patients, action: any) => {
@@ -24,6 +25,11 @@ const patientReducer = (state = initialState.patients, action: any) => {
         errorCode: action.payload.error,
         patients: [],
       };
+    case ADD_PATIENT:
+      let updatedState = { ...state };
+      let patientsState: any[] = updatedState.patients;
+      patientsState.push(action.newPatient);
+      return updatedState;
     default:
       return state;
   }

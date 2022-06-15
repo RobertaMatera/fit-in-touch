@@ -11,6 +11,7 @@ import AllPatientInfo from "./components/PatientDetails/AllPatientInfoComponent"
 import PatientHistory from "./components/PatientHistory/PatientHistoryComponent";
 import DietBoard from "./components/DietBoard/DietBoardComponent";
 import LastDiet from "./components/LastDiet/LastDietComponent";
+import Home from "./components/Home/HomeComponent";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -32,6 +33,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop>
         <div>
+          {/* <Home /> */}
           <header>
             <Navigation />
           </header>

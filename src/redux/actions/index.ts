@@ -1,4 +1,5 @@
 import {
+  ADD_PATIENT,
   FETCH_PATIENTS_DATA_ERROR,
   FETCH_PATIENTS_DATA_REQUEST,
   FETCH_PATIENTS_DATA_SUCCESS,
@@ -21,5 +22,12 @@ export function fetchPatientsDataError(error: any) {
   return {
     type: FETCH_PATIENTS_DATA_ERROR,
     payload: { error },
+  };
+}
+
+export function addPatient(newPatient: any) {
+  return {
+    type: ADD_PATIENT,
+    newPatient,
   };
 }

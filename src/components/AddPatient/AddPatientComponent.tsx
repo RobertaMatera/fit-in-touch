@@ -2,6 +2,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { addPatientAction } from "../../redux/services/patients";
 
 const AddPatient = () => {
   type UserSubmitForm = {
@@ -9,10 +12,6 @@ const AddPatient = () => {
     surname: string;
     dateOfBirth: string;
     gender: string;
-    phoneNumber: string;
-    email: string;
-    address: string;
-    paymentMethod: string;
     height: string;
     weight: string;
     waistCircumference: string;
@@ -21,23 +20,25 @@ const AddPatient = () => {
     fatMass: string;
     phi: string;
     bIva: string;
+    contactInfo: {
+      phoneNumber: string;
+      email: string;
+      address: string;
+      paymentMethod: string;
+    }[];
   };
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .required("name is required")
       .min(2, "name must be at least 2 characters")
-      .max(10, "name must not exceed 10 characters"),
+      .max(20, "name must not exceed 20 characters"),
     surname: Yup.string()
       .required("surname is required")
       .min(2, "surname must be at least 2 characters")
       .max(10, "surname must not exceed 10 characters"),
     dateOfBirth: Yup.string().required("date of birth is required"),
     gender: Yup.string().required("gender is required"),
-    phoneNumber: Yup.string().required("phone number is required"),
-    email: Yup.string().required("Email is required").email("Email is invalid"),
-    address: Yup.string().required("address is required"),
-    paymentMethod: Yup.string().required("payment method is required"),
     height: Yup.string()
       .required("height is required")
       .min(2, "height must be at least 2 characters")
@@ -70,6 +71,18 @@ const AddPatient = () => {
       .required("b iva is required")
       .min(2, "b iva be at least 2 characters")
       .max(3, "b iva must not exceed 3 characters"),
+    contactInfo: Yup.array()
+      .of(
+        Yup.object().shape({
+          phoneNumber: Yup.string().required("phone number is required"),
+          email: Yup.string()
+            .required("Email is required")
+            .email("Email is invalid"),
+          address: Yup.string().required("address is required"),
+          paymentMethod: Yup.string().required("payment method is required"),
+        })
+      )
+      .required(),
   });
 
   const {
@@ -81,8 +94,11 @@ const AddPatient = () => {
     resolver: yupResolver(validationSchema),
   });
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const onSubmit = (data: UserSubmitForm) => {
     console.log(JSON.stringify(data, null, 2));
+    dispatch(addPatientAction(data)).then(() => navigate("/patients"));
   };
 
   return (
@@ -164,13 +180,16 @@ const AddPatient = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("phoneNumber")}
+                  {...register("contactInfo.0.phoneNumber")}
                   className={`new-patient-form mb-4 ${
-                    errors.phoneNumber ? "is-invalid" : ""
+                    errors.contactInfo && errors.contactInfo[0].phoneNumber
+                      ? "is-invalid"
+                      : ""
                   }`}
                 />
                 <div className="invalid-feedback">
-                  {errors.phoneNumber?.message}
+                  {errors.contactInfo &&
+                    errors.contactInfo[0].phoneNumber?.message}
                 </div>
               </div>
               <div className="d-flex flex-column m-0 ms-md-5">
@@ -179,12 +198,16 @@ const AddPatient = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("email")}
+                  {...register("contactInfo.0.email")}
                   className={`new-patient-form mb-4 ${
-                    errors.email ? "is-invalid" : ""
+                    errors.contactInfo && errors.contactInfo[0].email
+                      ? "is-invalid"
+                      : ""
                   }`}
                 />
-                <div className="invalid-feedback">{errors.email?.message}</div>
+                <div className="invalid-feedback">
+                  {errors.contactInfo && errors.contactInfo[0].email?.message}
+                </div>
               </div>
             </div>
             <div className="d-flex flex-column flex-md-row form-group">
@@ -194,13 +217,15 @@ const AddPatient = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("address")}
+                  {...register("contactInfo.0.address")}
                   className={`new-patient-form mb-4 ${
-                    errors.address ? "is-invalid" : ""
+                    errors.contactInfo && errors.contactInfo[0].address
+                      ? "is-invalid"
+                      : ""
                   }`}
                 />
                 <div className="invalid-feedback">
-                  {errors.address?.message}
+                  {errors.contactInfo && errors.contactInfo[0].address?.message}
                 </div>
               </div>
               <div className="d-flex flex-column m-0 ms-md-5">
@@ -209,13 +234,16 @@ const AddPatient = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("paymentMethod")}
+                  {...register("contactInfo.0.paymentMethod")}
                   className={`new-patient-form mb-4 ${
-                    errors.paymentMethod ? "is-invalid" : ""
+                    errors.contactInfo && errors.contactInfo[0].paymentMethod
+                      ? "is-invalid"
+                      : ""
                   }`}
                 />
                 <div className="invalid-feedback">
-                  {errors.paymentMethod?.message}
+                  {errors.contactInfo &&
+                    errors.contactInfo[0].paymentMethod?.message}
                 </div>
               </div>
             </div>
