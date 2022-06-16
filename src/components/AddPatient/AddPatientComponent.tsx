@@ -22,7 +22,7 @@ const AddPatient = () => {
     bIva: string;
     contactInfo: {
       phoneNumber: string;
-      email: string;
+      mail: string;
       address: string;
       paymentMethod: string;
     }[];
@@ -75,7 +75,7 @@ const AddPatient = () => {
       .of(
         Yup.object().shape({
           phoneNumber: Yup.string().required("phone number is required"),
-          email: Yup.string()
+          mail: Yup.string()
             .required("Email is required")
             .email("Email is invalid"),
           address: Yup.string().required("address is required"),
@@ -97,7 +97,7 @@ const AddPatient = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const onSubmit = (data: UserSubmitForm) => {
-    console.log(JSON.stringify(data, null, 2));
+    console.log(data);
     dispatch(addPatientAction(data)).then(() => navigate("/patients"));
   };
 
@@ -198,15 +198,15 @@ const AddPatient = () => {
                 </label>
                 <input
                   type="text"
-                  {...register("contactInfo.0.email")}
+                  {...register("contactInfo.0.mail")}
                   className={`new-patient-form mb-4 ${
-                    errors.contactInfo && errors.contactInfo[0].email
+                    errors.contactInfo && errors.contactInfo[0].mail
                       ? "is-invalid"
                       : ""
                   }`}
                 />
                 <div className="invalid-feedback">
-                  {errors.contactInfo && errors.contactInfo[0].email?.message}
+                  {errors.contactInfo && errors.contactInfo[0].mail?.message}
                 </div>
               </div>
             </div>

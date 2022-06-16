@@ -8,11 +8,14 @@ import {
 import PatientsDataService from "./patientsService";
 
 const createNewPatient = async (newPatient: any) => {
+  console.log("create", newPatient);
   try {
     let response = await PatientsDataService.createPatient(newPatient);
+    console.log("response", response.data);
     return response.data;
   } catch (error) {
     let errorMessage = "Failed in posting new patient";
+    console.log(errorMessage);
     if (error instanceof Error) {
       errorMessage = error.message;
     }
@@ -41,18 +44,18 @@ export const getPatientsAction = () => {
 };
 
 export const addPatientAction = (newPatient: any) => {
+  debugger;
   return async (dispatch: Dispatch, getState: any) => {
     let currentState = getState().patients.patients;
     let isThereNewPatient = currentState.findIndex(
-      (item: any) => item.contactInfo.mail === newPatient.email
+      (item: any) => item.contactInfo.mail === newPatient.contactInfo[0].mail
     );
-    console.log("currentState", currentState);
-    console.log("isThereNewPatient", isThereNewPatient);
     if (isThereNewPatient === -1) {
       const currentStateLength = currentState.length;
+      console.log("currentStateLength", currentStateLength);
       let newId = currentStateLength + 1;
+      newPatient.id = newId;
       let newPatientAdded = await createNewPatient(newPatient);
-      newPatientAdded.id = newId;
       alert("user added correctly");
       dispatch(addPatient(newPatientAdded));
     } else {

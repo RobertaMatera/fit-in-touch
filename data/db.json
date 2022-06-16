@@ -232,7 +232,6 @@
       "PHI": "1.1",
       "B_IVA": "0.642",
       "TBW": "65",
-      "EXC": "35",
       "EXC": "40",
       "contactInfo": [
         {
@@ -270,6 +269,52 @@
           "notes": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. "
         }
       ]
+    },
+    {
+      "name": "Magee Madden",
+      "surname": "Barnett",
+      "dateOfBirth": "23-Aug-2019",
+      "gender": "Tempore molestiae l",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (454) 248-5972",
+          "mail": "Sunt@gmail.com",
+          "address": "Placeat magni omnis",
+          "paymentMethod": "Quibusdam illo dolor"
+        }
+      ],
+      "height": "98",
+      "weight": "99",
+      "waistCircumference": "78",
+      "visceralAdiposeTissue": "78",
+      "freeFatMass": "11",
+      "fatMass": "98",
+      "phi": "23",
+      "bIva": "78",
+      "id": 11
+    },
+    {
+      "name": "Piper Pena",
+      "surname": "Compton",
+      "dateOfBirth": "18-Jul-1984",
+      "gender": "F",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (258) 345-5063",
+          "mail": "ciao@mail.com",
+          "address": "Rerum deserunt imped",
+          "paymentMethod": "Aut esse et natus s"
+        }
+      ],
+      "height": "11",
+      "weight": "11",
+      "waistCircumference": "33",
+      "visceralAdiposeTissue": "33",
+      "freeFatMass": "11",
+      "fatMass": "33",
+      "phi": "33",
+      "bIva": "99",
+      "id": 12
     }
   ]
 }
