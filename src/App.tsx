@@ -33,9 +33,6 @@ function App() {
     <BrowserRouter>
       <ScrollToTop>
         <div>
-          {/* <header>
-            <Navigation />
-          </header> */}
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route
