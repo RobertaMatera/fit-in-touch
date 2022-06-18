@@ -1,6 +1,7 @@
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link as NavLink, useLocation } from "react-router-dom";
 import { useState } from "react";
+import LogoName from "../LogoName/LogoNameComponent";
 
 const Navigation = () => {
   const [isLoggedIn, setIsLoggedIn] = useState("false");
@@ -13,14 +14,7 @@ const Navigation = () => {
       <Container fluid id="navigation">
         <Row>
           <Col xs={12} className="d-flex flex-row align-items-center">
-            <div className="d-inline-flex align-items-center me-auto">
-              <Image
-                src="my-logo.png"
-                alt="fit in touch logo"
-                className="my-logo"
-              />
-              <p className="ms-3">fit in touch</p>
-            </div>
+            <LogoName />
 
             <div className="doctor-name d-flex justify-content-center justify-content-md-end align-baseline mt-3">
               <p>Roberta Matera</p>
