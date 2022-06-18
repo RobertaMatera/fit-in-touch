@@ -26,8 +26,8 @@ const SinglePatientCard = ({ patientInfo }: any) => {
       <div className="text-container">
         <div>
           {" "}
-          <h3 className="mt-4 mb-2">
-            {patientInfo.name} {patientInfo.surname}
+          <h3 className="mt-4 mb-2 text-wrap">
+            {patientInfo.surname} {patientInfo.name}
           </h3>
           <div className="d-inline-flex align-self-center mt-1">
             <i className="bi bi-calendar me-2"></i>

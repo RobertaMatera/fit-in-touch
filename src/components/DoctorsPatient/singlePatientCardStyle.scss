@@ -94,6 +94,15 @@ div.icon-wrapper {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
+
+    &.text-wrap {
+      white-space: nowrap !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:hover {
+        overflow: visible;
+      }
+    }
   }
 }
 
