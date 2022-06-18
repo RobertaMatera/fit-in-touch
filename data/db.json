@@ -315,6 +315,29 @@
       "phi": "33",
       "bIva": "99",
       "id": 12
+    },
+    {
+      "name": "Ebony Simon",
+      "surname": "Leblanc",
+      "dateOfBirth": "23-Feb-1977",
+      "gender": "Vel voluptatem Magn",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (563) 291-3373",
+          "mail": "poi@mail.com",
+          "address": "Voluptatem vel cupid",
+          "paymentMethod": "Et in mollit et itaq"
+        }
+      ],
+      "height": "77",
+      "weight": "789",
+      "waistCircumference": "12",
+      "visceralAdiposeTissue": "14",
+      "freeFatMass": "66",
+      "fatMass": "98 ",
+      "phi": "89 ",
+      "bIva": "77",
+      "id": 13
     }
   ]
 }

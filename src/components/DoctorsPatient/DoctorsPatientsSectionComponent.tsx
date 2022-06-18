@@ -2,8 +2,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import SinglePatientCard from "./SinglePatientCardComponent";
 import Search from "./SearchComponent";
 import Filter from "./FilterComponent";
+import { useState } from "react";
 
 const DoctorsPatientsSection = ({ patients }: any) => {
+  const [showMore, setShowMore] = useState(false);
   return (
     <Container fluid id="DoctorsPatientsSection">
       <Row>
@@ -13,7 +15,7 @@ const DoctorsPatientsSection = ({ patients }: any) => {
         </Col>
       </Row>
       <Row className="d-flex justify-content-center row-card mb-5">
-        {patients.map((patient: any) => (
+        {patients?.slice(0, 8).map((patient: any) => (
           <Col
             xs={12}
             md={6}
@@ -26,10 +28,27 @@ const DoctorsPatientsSection = ({ patients }: any) => {
           </Col>
         ))}
       </Row>
-      <Row>
+      <Row className="d-flex justify-content-center row-card mb-5">
+        {showMore &&
+          patients?.slice(8, patients.length).map((patient: any) => (
+            <Col
+              xs={12}
+              md={6}
+              lg={4}
+              xl={3}
+              className="d-flex justify-content-center mb-3"
+              key={patient.id}
+            >
+              <SinglePatientCard patientInfo={patient} />
+            </Col>
+          ))}
         <Col xs={12} className="d-flex justify-content-center mb-5">
-          <button type="button" className="btn btn-show-hide">
-            Show more
+          <button
+            type="button"
+            onClick={() => setShowMore(!showMore)}
+            className="btn btn-show-hide"
+          >
+            {showMore ? "Show less" : "Show more"}
           </button>
         </Col>
       </Row>
