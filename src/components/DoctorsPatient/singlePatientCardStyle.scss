@@ -39,10 +39,8 @@ div.icon-wrapper {
     @include icon-hover($main-blue);
   }
   &:focus {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
   }
 }
 
