@@ -1,0 +1,71 @@
+#home {
+  .position-relative {
+    position: relative;
+  }
+  .img-bg {
+    width: 110%;
+    margin: 0px -15px 0px -15px;
+  }
+  /*  .img-bg-2 {
+    height: 20%;
+  } */
+  .my-logo-home {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    right: 50px;
+    @media screen and (min-width: 992px) {
+      top: 100px;
+      left: 230px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+  h1 {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    @media screen and (min-width: 992px) {
+      top: 100px;
+      left: 300px;
+    }
+  }
+  h1,
+  h3 {
+    color: $main-blue;
+  }
+  span.highlight-text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .sub-section-bg {
+    background-color: rgba($light-sand, 30%);
+  }
+  .sub-section-bg-single {
+    background-color: rgba($light-sand, 30%);
+    height: 160px;
+    @media screen and (min-width: 992px) {
+      height: 200px;
+    }
+  }
+  .white-space {
+    height: 60px;
+  }
+  #exampleInputEmail1 {
+    margin-left: auto;
+    &:focus-visible {
+      outline: 2px solid $main-blue;
+      border-radius: 25px;
+    }
+  }
+  .send-mail-form-container {
+    position: relative;
+    & .send-mail-icon {
+      position: absolute;
+      top: 9px;
+      right: 5px;
+      color: $main-blue;
+    }
+  }
+}

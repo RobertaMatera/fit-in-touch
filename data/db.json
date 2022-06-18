@@ -338,6 +338,29 @@
       "phi": "89 ",
       "bIva": "77",
       "id": 13
+    },
+    {
+      "name": "Diego",
+      "surname": "Striver",
+      "dateOfBirth": "25/12/2002",
+      "gender": "M",
+      "contactInfo": [
+        {
+          "phoneNumber": "358 954 645 356",
+          "mail": "diego@mail.com",
+          "address": "street view ",
+          "paymentMethod": "paypal"
+        }
+      ],
+      "height": "173",
+      "weight": "100",
+      "waistCircumference": "102",
+      "visceralAdiposeTissue": "11",
+      "freeFatMass": "32",
+      "fatMass": "45",
+      "phi": "55",
+      "bIva": "57",
+      "id": 14
     }
   ]
 }

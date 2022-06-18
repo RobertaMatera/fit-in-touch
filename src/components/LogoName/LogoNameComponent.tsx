@@ -7,7 +7,9 @@ const LogoName = () => {
       <NavLink to="/">
         <Image src="my-logo.png" alt="fit in touch logo" className="my-logo" />
       </NavLink>
-      <p className="ms-3">Fit in touch</p>
+      <p className="ms-3" style={{ color: "#8db1bb" }}>
+        Fit in touch
+      </p>
     </div>
   );
 };
