@@ -1,7 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import SinglePatientCard from "./SinglePatientCardComponent";
 import Search from "./SearchComponent";
-import Filter from "./FilterComponent";
 import { useState } from "react";
 
 const DoctorsPatientsSection = ({ patients }: any) => {
@@ -11,7 +10,6 @@ const DoctorsPatientsSection = ({ patients }: any) => {
       <Row>
         <Col xs={12} className="d-block d-md-flex justify-content-center">
           <Search />
-          <Filter />
         </Col>
       </Row>
       <Row className="d-flex justify-content-center row-card mb-5">

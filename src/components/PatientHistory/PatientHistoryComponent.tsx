@@ -1,9 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import AddPatient from "../AddPatient/AddPatientComponent";
-import Filter from "../DoctorsPatient/FilterComponent";
 import Search from "../DoctorsPatient/SearchComponent";
 import DateAndDataCheck from "./DateAndDataCheckComponent";
-import InfoCheck from "./InfoCheckComponent";
 
 const PatientHistory = () => {
   return (
@@ -17,7 +14,6 @@ const PatientHistory = () => {
 
           <div className="d-md-flex flex-md-row justify-content-center mt-3 mb-5">
             <Search />
-            <Filter />
           </div>
         </Col>
       </Row>

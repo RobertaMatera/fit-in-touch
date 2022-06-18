@@ -1,6 +1,6 @@
 const Search = () => {
   return (
-    <form className="d-flex my-2 me-5">
+    <form className="d-flex justify-content-center my-2">
       <input
         className="my-form-control"
         type="search"

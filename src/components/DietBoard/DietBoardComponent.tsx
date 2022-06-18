@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import Filter from "../DoctorsPatient/FilterComponent";
 import Search from "../DoctorsPatient/SearchComponent";
 import DietFile from "./DietFileComponent";
 
@@ -9,7 +8,6 @@ const DietBoard = () => {
       <Row>
         <Col xs={12} className="d-flex flex-row justify-content-center mb-5">
           <Search />
-          <Filter />
         </Col>
       </Row>
       <Row>
