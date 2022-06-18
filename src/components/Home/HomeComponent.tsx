@@ -3,7 +3,7 @@ const Home = () => {
   return (
     <>
       ciao
-      <NavLink to="/">My Agenda</NavLink>
+      <NavLink to="/agenda">My Agenda</NavLink>
     </>
   );
 };

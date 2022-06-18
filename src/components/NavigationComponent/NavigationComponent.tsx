@@ -22,7 +22,7 @@ const Navigation = () => {
           </div>
 
           <div className="doctor-name d-flex justify-content-center justify-content-md-end align-baseline mt-3">
-            <p>Doctor Name</p>
+            <p>Roberta Matera</p>
             {isLoggedIn === "true" ? (
               <div className="d-flex flex-column text-center ms-3">
                 <i className="bi bi-person-check-fill"></i>
@@ -50,7 +50,10 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li className="my-nav-link">
-                <NavLink to="/" className={path === "/" ? "active" : ""}>
+                <NavLink
+                  to="/agenda"
+                  className={path === "/agenda" ? "active" : ""}
+                >
                   My Agenda
                 </NavLink>
               </li>

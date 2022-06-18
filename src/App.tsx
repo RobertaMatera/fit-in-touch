@@ -33,28 +33,82 @@ function App() {
     <BrowserRouter>
       <ScrollToTop>
         <div>
-          {/* <Home /> */}
-          <header>
+          {/* <header>
             <Navigation />
-          </header>
+          </header> */}
           <Routes>
-            <Route path="/" element={<MainDoctorSection />} />
+            <Route path="/" element={<Home />}></Route>
+            <Route
+              path="/agenda"
+              element={
+                <>
+                  <Navigation /> <MainDoctorSection />
+                </>
+              }
+            />
             <Route
               path="/patients"
-              element={<DoctorsPatientsSection patients={patientsList} />}
+              element={
+                <>
+                  <Navigation />
+                  <DoctorsPatientsSection patients={patientsList} />
+                </>
+              }
             />
             <Route
               path="/patients/:id"
-              element={<PatientDetails patientData={patientsList} />}
+              element={
+                <>
+                  <Navigation />
+                  <PatientDetails patientData={patientsList} />
+                </>
+              }
             />
-            <Route path="/add-patient" element={<AddPatient />} />
+            <Route
+              path="/add-patient"
+              element={
+                <>
+                  <Navigation />
+                  <AddPatient />
+                </>
+              }
+            />
             <Route
               path="/patients/:id/info"
-              element={<AllPatientInfo patientInfoProps={patientsList} />}
+              element={
+                <>
+                  <Navigation />
+                  <AllPatientInfo patientInfoProps={patientsList} />
+                </>
+              }
             />
-            <Route path="/patient/:id/history" element={<PatientHistory />} />
-            <Route path="/patient/:id/diet-board" element={<DietBoard />} />
-            <Route path="/patient/:id/last-diet" element={<LastDiet />} />
+            <Route
+              path="/patient/:id/history"
+              element={
+                <>
+                  <Navigation />
+                  <PatientHistory />
+                </>
+              }
+            />
+            <Route
+              path="/patient/:id/diet-board"
+              element={
+                <>
+                  <Navigation />
+                  <DietBoard />
+                </>
+              }
+            />
+            <Route
+              path="/patient/:id/last-diet"
+              element={
+                <>
+                  <Navigation />
+                  <LastDiet />
+                </>
+              }
+            />
           </Routes>
           <footer>
             <Footer />
