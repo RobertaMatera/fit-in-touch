@@ -21,9 +21,6 @@ const PatientHistory = () => {
       <Row className="mb-4">
         <DateAndDataCheck />
       </Row>
-      <Row className="mb-4">
-        <DateAndDataCheck />
-      </Row>
     </Container>
   );
 };
