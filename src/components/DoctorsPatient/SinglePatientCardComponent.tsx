@@ -34,7 +34,7 @@ const SinglePatientCard = ({ patientInfo }: any) => {
             <p> 30/06/2022 </p>
           </div>
           <hr />
-          <Link to="/patient/id/last-diet">
+          <Link to={`/patient/${patientInfo.id}/last-diet`}>
             <button type="button" className="btn btn-card">
               Last Diet
             </button>

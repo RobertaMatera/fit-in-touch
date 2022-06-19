@@ -1,7 +1,12 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const LastDiet = () => {
+const LastDiet = ({ patientInfo }: any) => {
+  const params = useParams();
+  const paramsId: string = params.id!;
+  const id = parseInt(paramsId) - 1;
+  const patient = patientInfo[id];
+
   return (
     <Container fluid id="last-diet">
       <Row>
@@ -9,7 +14,9 @@ const LastDiet = () => {
           <div>
             {" "}
             <h2>last diet of</h2>
-            <h1>name surname</h1>
+            <h1>
+              {patient.name} {patient.surname}
+            </h1>
           </div>
 
           <hr className="separation-line" />
@@ -20,7 +27,7 @@ const LastDiet = () => {
           <div>
             <img
               className="img-last-diet mt-3 mb-5"
-              src="https://picsum.photos/800/400"
+              src="https://i0.wp.com/dot2trot.com/wp-content/uploads/2014/07/dot-weekly-menu.png?resize=538%2C365"
               alt="last-diet"
             />
           </div>

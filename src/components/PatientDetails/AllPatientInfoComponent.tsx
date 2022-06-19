@@ -8,7 +8,6 @@ const AllPatientInfo = ({ patientInfoProps }: any) => {
   const id = parseInt(paramsId) - 1;
 
   const patientInfo = patientInfoProps[id];
-  console.log(patientInfo);
   const dateOfBirth = patientInfo.dateOfBirth;
   const age = getAge(dateOfBirth);
 

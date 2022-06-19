@@ -102,7 +102,7 @@ function App() {
               element={
                 <>
                   <Navigation />
-                  <LastDiet />
+                  <LastDiet patientInfo={patientsList} />
                 </>
               }
             />
