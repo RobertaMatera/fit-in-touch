@@ -132,6 +132,7 @@ const Home = () => {
           {/* <Image src="/images/sfondo2.png" alt="nutritionist"></Image> */}
           <Col
             xs={12}
+            md={6}
             lg={4}
             className="d-flex flex-column justify-content-center text-center my-5 img-bg-2"
           >
