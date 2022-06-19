@@ -407,6 +407,75 @@
       "phi": "17",
       "bIva": "77",
       "id": 16
+    },
+    {
+      "name": "Andrew Short",
+      "surname": "Norton",
+      "dateOfBirth": "12-Dec-1987",
+      "gender": "M",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (401) 626-9968",
+          "mail": "mailRoberta@mail.com",
+          "address": "Ea optio asperiores",
+          "paymentMethod": "Esse eiusmod ullam "
+        }
+      ],
+      "height": "158",
+      "weight": "114",
+      "waistCircumference": "147",
+      "visceralAdiposeTissue": "12",
+      "freeFatMass": "13",
+      "fatMass": "25",
+      "phi": "12",
+      "bIva": "27",
+      "id": 17
+    },
+    {
+      "name": "Nayda Beck",
+      "surname": "Callahan",
+      "dateOfBirth": "17-Aug-2017",
+      "gender": "M",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (883) 819-4612",
+          "mail": "mail@i.mail.com",
+          "address": "Fugit et numquam ad",
+          "paymentMethod": "Anim deleniti minus "
+        }
+      ],
+      "height": "454",
+      "weight": "555",
+      "waistCircumference": "55",
+      "visceralAdiposeTissue": "55",
+      "freeFatMass": "55",
+      "fatMass": "55",
+      "phi": "55",
+      "bIva": "55",
+      "id": 18
+    },
+    {
+      "name": "Kaden Langley",
+      "surname": "Garza",
+      "dateOfBirth": "27-Mar-1993",
+      "gender": "M",
+      "contactInfo": [
+        {
+          "phoneNumber": "+1 (743) 437-1662",
+          "mail": "new@mail.com",
+          "address": "Maiores exercitation",
+          "paymentMethod": "Atque fugit laborio"
+        }
+      ],
+      "height": "555",
+      "weight": "55",
+      "waistCircumference": "555",
+      "visceralAdiposeTissue": "555",
+      "freeFatMass": "55",
+      "fatMass": "55",
+      "phi": "55",
+      "bIva": "55",
+      "id": 19
     }
   ]
 }
