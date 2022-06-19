@@ -1,19 +1,28 @@
-import { Link as NavLink } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import LogoName from "../LogoName/LogoNameComponent";
+import { useState } from "react";
+import LogInForm from "../LogInFormComponent/LogInFormComponent";
+
 const Home = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <section id="home">
       <Container fluid id="navigation">
         <Row>
+          <span className="log-in-component">
+            {isLoggedIn && <LogInForm />}
+          </span>
           <Col xs={12} className="d-flex flex-row align-items-center">
             <LogoName />
             <div className="doctor-name d-flex justify-content-center justify-content-md-end align-baseline mt-3">
-              <div className="d-flex flex-column text-center ms-3">
-                <NavLink to="/agenda" className="log-in-link">
-                  <i className="bi bi-person-check-fill"></i>
-                  <p className="log-in-out">log in</p>
-                </NavLink>
+              <div
+                className="d-flex flex-column text-center ms-3"
+                onClick={() => {
+                  setIsLoggedIn(true);
+                }}
+              >
+                <i className="bi bi-person-check-fill"></i>
+                <p className="log-in-out">log in</p>
               </div>
             </div>
           </Col>

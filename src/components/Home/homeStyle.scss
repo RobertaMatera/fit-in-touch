@@ -113,4 +113,17 @@
       left: -484px;
     }
   }
+  .log-in-component {
+    position: absolute;
+    z-index: 3;
+    margin-top: 82px;
+    @media screen and (min-width: 768px) {
+      top: 100px;
+      margin: 0px;
+    }
+    @media screen and (min-width: 992px) {
+      top: 100px;
+      left: 28%;
+    }
+  }
 }
