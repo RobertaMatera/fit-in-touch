@@ -25,12 +25,15 @@ const Home = () => {
               src="/images/nutritionist.png"
               alt="nutritionist"
             ></Image>
-            <Image
-              src="my-logo.png"
-              alt="fit in touch logo"
-              className="my-logo-home"
-            />
-            <h1>Fit in touch</h1>
+            <div className="my-auto">
+              {" "}
+              <Image
+                src="my-logo.png"
+                alt="fit in touch logo"
+                className="d-none d-md-flex my-logo-home"
+              />
+              <h1>Fit in touch</h1>
+            </div>
           </Col>
         </Row>
 
