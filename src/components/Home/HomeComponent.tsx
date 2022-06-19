@@ -19,7 +19,7 @@ const Home = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} className="position-relative">
+          <Col xs={12} className="position-relative px-0">
             <Image
               className="img-bg"
               src="/images/nutritionist.png"
