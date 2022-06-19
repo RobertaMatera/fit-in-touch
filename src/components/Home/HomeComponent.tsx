@@ -140,7 +140,6 @@ const Home = () => {
           </Col>
         </Row>
         <Row className="justify-content-center">
-          {/* <Image src="/images/sfondo2.png" alt="nutritionist"></Image> */}
           <Col
             xs={12}
             md={6}
@@ -162,6 +161,11 @@ const Home = () => {
             </form>
           </Col>
         </Row>
+        <Image
+          src="/images/sfondo2.png"
+          alt="nutritionist"
+          className="home-bg-img"
+        ></Image>
       </Container>
     </section>
   );

@@ -89,4 +89,22 @@
       color: $main-blue;
     }
   }
+  .home-bg-img {
+    position: absolute;
+    z-index: -1;
+    @media screen and (max-width: 766px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      visibility: visible;
+      top: 2336px;
+      height: 23%;
+      left: -134px;
+    }
+    @media screen and (min-width: 992px) {
+      top: 1371px;
+      height: 97.5%;
+      left: -484px;
+    }
+  }
 }
