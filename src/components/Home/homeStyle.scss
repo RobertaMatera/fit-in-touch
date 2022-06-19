@@ -5,9 +5,15 @@
   .img-bg {
     width: 100%;
   }
-  /*  .img-bg-2 {
-    height: 20%;
-  } */
+  .log-in-link {
+    text-decoration: none;
+    &:link {
+      color: black;
+    }
+    &:visited {
+      color: black;
+    }
+  }
   .my-logo-home {
     position: absolute;
     @media screen and (min-width: 768px) {

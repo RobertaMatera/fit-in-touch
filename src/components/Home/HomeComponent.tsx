@@ -10,7 +10,7 @@ const Home = () => {
             <LogoName />
             <div className="doctor-name d-flex justify-content-center justify-content-md-end align-baseline mt-3">
               <div className="d-flex flex-column text-center ms-3">
-                <NavLink to="/agenda">
+                <NavLink to="/agenda" className="log-in-link">
                   <i className="bi bi-person-check-fill"></i>
                   <p className="log-in-out">log in</p>
                 </NavLink>
