@@ -33,6 +33,17 @@ const Home = () => {
                 className="d-none d-md-flex my-logo-home"
               />
               <h1>Fit in touch</h1>
+              <div className="d-flex justify-content-center text-center spot-subtitle my-5">
+                <h5>
+                  Are you a <span className="highlight-text">dietitian</span> or
+                  a <span className="highlight-text">nutritionist</span>? <br />
+                  <span className="highlight-text">
+                    Revolutionizes the way you work!
+                  </span>{" "}
+                  <br /> Less stress, better organization, no effort. <br />{" "}
+                  <span className="highlight-text">Find out how!</span>
+                </h5>
+              </div>
             </div>
           </Col>
         </Row>

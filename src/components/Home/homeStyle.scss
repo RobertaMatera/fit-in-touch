@@ -18,7 +18,7 @@
     }
     @media screen and (min-width: 992px) {
       top: 70px;
-      left: 260px;
+      left: 200px;
       width: 100px;
       height: 100px;
     }
@@ -36,7 +36,7 @@
     }
     @media screen and (min-width: 992px) {
       top: 120px;
-      left: 344px;
+      left: 296px;
     }
   }
   h3 {
@@ -45,6 +45,20 @@
   span.highlight-text {
     font-size: 30px;
     font-weight: bold;
+  }
+  .spot-subtitle {
+    @media screen and (min-width: 992px) {
+      position: absolute;
+      top: 180px;
+      left: 200px;
+      text-align: left !important;
+      margin-top: 0px !important;
+      background-color: rgba($light-sand, 30%);
+      padding: 10px;
+    }
+    & h5 {
+      line-height: 1.6;
+    }
   }
   .sub-section-bg {
     background-color: rgba($light-sand, 30%);
