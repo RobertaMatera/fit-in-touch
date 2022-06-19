@@ -13,14 +13,14 @@ const DietBoard = () => {
       <Row>
         <Col xs={12} className="text-center">
           <div className="check-date mb-3 py-2">
-            <h6 className="mb-1">check date</h6>
+            <h6 className="mb-1">check up date</h6>
             <p>07/08/2021</p>
           </div>
           <DietFile />
         </Col>
         <Col xs={12} className="text-center">
           <div className="check-date mb-3 py-2">
-            <h6 className="mb-1">check date</h6>
+            <h6 className="mb-1">check up date</h6>
             <p>12/06/2021</p>
           </div>
           <DietFile />

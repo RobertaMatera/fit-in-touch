@@ -21,7 +21,7 @@ const LastDiet = ({ patientInfo }: any) => {
 
           <hr className="separation-line" />
           <div className="mt-2">
-            <h6>check date</h6>
+            <h6>check up date</h6>
             <p>07/08/2021</p>
           </div>
           <div>

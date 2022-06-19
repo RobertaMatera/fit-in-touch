@@ -3,7 +3,7 @@ const DietFile = () => {
     <>
       {" "}
       {/* <div className="check-date mb-3 py-2">
-        <h6 className="mb-1">check date</h6>
+        <h6 className="mb-1">check up date</h6>
         <p>07/08/2021</p>
       </div> */}
       <div className="mb-5">

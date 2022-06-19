@@ -47,7 +47,7 @@ const Home = () => {
                   Are you a <span className="highlight-text">dietitian</span> or
                   a <span className="highlight-text">nutritionist</span>? <br />
                   <span className="highlight-text">
-                    Revolutionizes the way you work!
+                    Revolutionize the way you work!
                   </span>{" "}
                   <br /> Less stress, better organization, no effort. <br />{" "}
                   <span className="highlight-text">Find out how!</span>
@@ -83,7 +83,7 @@ const Home = () => {
             lg={6}
             className="d-flex flex-column justify-content-center text-center mt-5 mb-4"
           >
-            <h3>What you can do with Fit in touch?</h3>
+            <h3>What can you do with Fit in touch?</h3>
           </Col>
         </Row>
         <Row className="d-flex justify-content-center">
