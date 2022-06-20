@@ -56,7 +56,7 @@ export const addPatientAction = (newPatient: any) => {
       let newId = currentStateLength + 1;
       newPatient.id = newId;
       let newPatientAdded = await createNewPatient(newPatient);
-      alert("user added correctly");
+      //alert("user added correctly");
       dispatch(addPatient(newPatientAdded));
     } else {
       alert("this user already exist");
